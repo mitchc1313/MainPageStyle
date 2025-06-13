@@ -1399,7 +1399,7 @@ td.all_play_wlt {
 
 td.h2hwlt,
 th.h2hwlt {
-    width: 70px;
+    width: 35px;
 }
 
 #body_standings #standings div.mobile-wrap {
@@ -1442,7 +1442,7 @@ th.h2hwlt {
 
     td.h2hwlt,
     th.h2hwlt {
-        width: 54px;
+        width: 35px;
     }
 
     div#tabcontent0.homepagetabcontent table#homepagecolumns td#homepagecolumn2.homepagecolumn div.mobile-wrap {
@@ -1634,7 +1634,7 @@ td a:active,
 td a:visited,
 td a:focus {
     font-family: "Industry", sans-serif;
-    color: var(--primary-color);
+    color: var(--dark-color);
 }
 
 td.fname {
@@ -1741,13 +1741,21 @@ caption a:focus,
 .welcome a:focus,
 #MFLPlayerPopupLinks .popreport td a,
 #owner_activity td.franchisename,
-.myfantasyleague_tabmenu #homepagetabs li a,
 #vsubmenu,
 #vsubmenu li,
 #vsubmenu li a {
     font-family: "Industry", sans-serif;
     padding: .188rem;
-    color: var(--primary-color);
+    color: var(--dark-color);
+}
+
+.myfantasyleague_tabmenu #homepagetabs li a {
+    color: white;
+    font-family: 'Industry', sans-serif;
+}
+
+#tab_reports {
+    margin-bottom: 0;
 }
 
 .text-white:link {
@@ -1763,12 +1771,12 @@ caption a:focus,
 }
 
 a:link {
-    color: var(--primary-color);
+    color: var(--dark-color);
     text-decoration: none;
 }
 
 a:active {
-    color: var(--primary-color);
+    color: var(--dark-color);
     font-weight: bold;
 }
 
@@ -2407,10 +2415,14 @@ table#franchise_schedule.homepagemodule.report td.week a,
 }
 
 table#franchise_schedule.homepagemodule.report .franchiseicon,
-#options_16 td.franchisename img,
-#options_16 td img {
+#options_16 td.franchisename img {
     width: auto;
     height: 28px;
+}
+
+#options_16 tr.oddtablerow td img,
+#options_16 tr.eventablerow td img {
+    display: none;
 }
 
 table#franchise_schedule.homepagemodule.report .newposition td,
@@ -2597,6 +2609,11 @@ table#franchise_schedule.homepagemodule.report caption span::before {
     height: 100%;
 }
 
+#options_16 .matchup-card .torn-bg-svg {
+    height: 80px;
+    width: 26px;
+}
+
 .matchup-card .abbreviation-text {
     position: relative;
     z-index: 1;
@@ -2631,6 +2648,12 @@ table#franchise_schedule.homepagemodule.report caption span::before {
     font-size: 32px;
 }
 
+#options_16 .schedule-team-logo {
+    width: 85%;
+    height: auto;
+    margin: 15px auto;
+}
+
 .visual-schedule-container {
     padding: 0;
     display: flex;
@@ -2639,6 +2662,20 @@ table#franchise_schedule.homepagemodule.report caption span::before {
     max-height: 800px;
     margin-top: -20px;
     margin-bottom: 20px;
+    align-content: center;
+}
+
+#options_16 .visual-schedule-container {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 0px;
+    max-height: unset;
+}
+
+.schedule-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-content: center;
 }
 
@@ -2697,83 +2734,103 @@ table#franchise_schedule.homepagemodule.report caption span::before {
     font-size: 13px;
 }
 
-#tabcontent900.franchiselogo_0001 .matchup-card.home .torn-bg-svg {
+#tabcontent900.franchiselogo_0001 .matchup-card.home .torn-bg-svg,
+#options_16 .franchise_0001 .matchup-card.home .torn-bg-svg {
     fill: var(--team_0001);
 }
 
-#tabcontent900.franchiselogo_0001 .matchup-card.away .torn-bg-svg {
+#tabcontent900.franchiselogo_0001 .matchup-card.away .torn-bg-svg,
+#options_16 .franchise_0001 .matchup-card.away .torn-bg-svg {
     fill: var(--team_0001-second);
 }
 
-#tabcontent900.franchiselogo_0002 .matchup-card.home .torn-bg-svg {
+#tabcontent900.franchiselogo_0002 .matchup-card.home .torn-bg-svg,
+#options_16 .franchise_0002 .matchup-card.home .torn-bg-svg {
     fill: var(--team_0002);
 }
 
-#tabcontent900.franchiselogo_0002 .matchup-card.away .torn-bg-svg {
+#tabcontent900.franchiselogo_0002 .matchup-card.away .torn-bg-svg,
+#options_16 .franchise_0002 .matchup-card.away .torn-bg-svg {
     fill: var(--team_0002-second);
 }
 
-#tabcontent900.franchiselogo_0003 .matchup-card.home .torn-bg-svg {
+#tabcontent900.franchiselogo_0003 .matchup-card.home .torn-bg-svg,
+#options_16 .franchise_0003 .matchup-card.home .torn-bg-svg {
     fill: var(--team_0003);
 }
 
-#tabcontent900.franchiselogo_0003 .matchup-card.away .torn-bg-svg {
+#tabcontent900.franchiselogo_0003 .matchup-card.away .torn-bg-svg,
+#options_16 .franchise_0003 .matchup-card.away .torn-bg-svg {
     fill: var(--team_0003-second);
 }
 
-#tabcontent900.franchiselogo_0004 .matchup-card.home .torn-bg-svg {
+#tabcontent900.franchiselogo_0004 .matchup-card.home .torn-bg-svg,
+#options_16 .franchise_0004 .matchup-card.home .torn-bg-svg {
     fill: var(--team_0004);
 }
 
-#tabcontent900.franchiselogo_0004 .matchup-card.away .torn-bg-svg {
+#tabcontent900.franchiselogo_0004 .matchup-card.away .torn-bg-svg,
+#options_16 .franchise_0004 .matchup-card.away .torn-bg-svg {
     fill: var(--team_0004-second);
 }
 
-#tabcontent900.franchiselogo_0005 .matchup-card.home .torn-bg-svg {
+#tabcontent900.franchiselogo_0005 .matchup-card.home .torn-bg-svg,
+#options_16 .franchise_0005 .matchup-card.home .torn-bg-svg {
     fill: var(--team_0005);
 }
 
-#tabcontent900.franchiselogo_0005 .matchup-card.away .torn-bg-svg {
+#tabcontent900.franchiselogo_0005 .matchup-card.away .torn-bg-svg,
+#options_16 .franchise_0005 .matchup-card.away .torn-bg-svg {
     fill: var(--team_0005-second);
 }
 
-#tabcontent900.franchiselogo_0006 .matchup-card.home .torn-bg-svg {
+#tabcontent900.franchiselogo_0006 .matchup-card.home .torn-bg-svg,
+#options_16 .franchise_0006 .matchup-card.home .torn-bg-svg {
     fill: var(--team_0006);
 }
 
-#tabcontent900.franchiselogo_0006 .matchup-card.away .torn-bg-svg {
+#tabcontent900.franchiselogo_0006 .matchup-card.away .torn-bg-svg,
+#options_16 .franchise_0006 .matchup-card.away .torn-bg-svg {
     fill: var(--team_0006-second);
 }
 
-#tabcontent900.franchiselogo_0007 .matchup-card.home .torn-bg-svg {
+#tabcontent900.franchiselogo_0007 .matchup-card.home .torn-bg-svg,
+#options_16 .franchise_0007 .matchup-card.home .torn-bg-svg {
     fill: var(--team_0007);
 }
 
-#tabcontent900.franchiselogo_0007 .matchup-card.away .torn-bg-svg {
+#tabcontent900.franchiselogo_0007 .matchup-card.away .torn-bg-svg,
+#options_16 .franchise_0007 .matchup-card.away .torn-bg-svg {
     fill: var(--team_0007-second);
 }
 
-#tabcontent900.franchiselogo_0008 .matchup-card.home .torn-bg-svg {
+#tabcontent900.franchiselogo_0008 .matchup-card.home .torn-bg-svg,
+#options_16 .franchise_0008 .matchup-card.home .torn-bg-svg {
     fill: var(--team_0008);
 }
 
-#tabcontent900.franchiselogo_0008 .matchup-card.away .torn-bg-svg {
+#tabcontent900.franchiselogo_0008 .matchup-card.away .torn-bg-svg,
+#options_16 .franchise_0008 .matchup-card.away .torn-bg-svg {
     fill: var(--team_0008-second);
 }
 
-#tabcontent900.franchiselogo_0009 .matchup-card.home .torn-bg-svg {
+#tabcontent900.franchiselogo_0009 .matchup-card.home .torn-bg-svg,
+#options_16 .franchise_0009 .matchup-card.home .torn-bg-svg {
     fill: var(--team_0009);
 }
 
-#tabcontent900.franchiselogo_0009 .matchup-card.away .torn-bg-svg {
+#tabcontent900.franchiselogo_0009 .matchup-card.away .torn-bg-svg,
+#options_16 .franchise_0009 .matchup-card.away .torn-bg-svg {
     fill: var(--team_0009-second);
 }
 
-#tabcontent900.franchiselogo_0010 .matchup-card.home .torn-bg-svg {
+#tabcontent900.franchiselogo_0010 .matchup-card.home .torn-bg-svg,
+#options_16 .franchise_0010 .matchup-card.home .torn-bg-svg {
     fill: var(--team_0010);
 }
 
-#tabcontent900.franchiselogo_0010 .matchup-card.away .torn-bg-svg {
+#tabcontent900.franchiselogo_0010 .matchup-card.away .torn-bg-svg,
+#options_16 .franchise_0010 .matchup-card.away .torn-bg-svg {
     fill: var(--team_0010-second);
 }
 
@@ -2922,237 +2979,350 @@ table#franchise_schedule.homepagemodule.report caption span::before {
 }
 
 
+/* ===== Franchise 0001 ===== */
 #tabcontent900.franchiselogo_0001 .matchup-card.home span.label,
 #tabcontent900.franchiselogo_0001 .matchup-card.home span.number,
 #tabcontent900.franchiselogo_0001 .matchup-card.home span.at-vs-label,
-#tabcontent900.franchiselogo_0001 .matchup-card.home {
+#tabcontent900.franchiselogo_0001 .matchup-card.home,
+#options_16 .franchise_0001 .matchup-card.home span.label,
+#options_16 .franchise_0001 .matchup-card.home span.number,
+#options_16 .franchise_0001 .matchup-card.home span.at-vs-label,
+#options_16 .franchise_0001 .matchup-card.home {
     color: var(--team_0001);
 }
 
 #tabcontent900.franchiselogo_0001 .matchup-card.away span.label,
 #tabcontent900.franchiselogo_0001 .matchup-card.away span.number,
 #tabcontent900.franchiselogo_0001 .matchup-card.away span.at-vs-label,
-#tabcontent900.franchiselogo_0001 .matchup-card.away {
+#tabcontent900.franchiselogo_0001 .matchup-card.away,
+#options_16 .franchise_0001 .matchup-card.away span.label,
+#options_16 .franchise_0001 .matchup-card.away span.number,
+#options_16 .franchise_0001 .matchup-card.away span.at-vs-label,
+#options_16 .franchise_0001 .matchup-card.away {
     color: var(--team_0001-second);
 }
 
 #tabcontent900.franchiselogo_0001 span,
 #tabcontent900.franchiselogo_0001 span::before,
 #tabcontent900.franchiselogo_0001 caption::before,
-#tabcontent900.franchiselogo_0001 #my_options li::before {
+#tabcontent900.franchiselogo_0001 #my_options li::before,
+#options_16 .franchise_0001 span,
+#options_16 .franchise_0001 span::before,
+#options_16 .franchise_0001 caption::before,
+#options_16 .franchise_0001 #my_options li::before {
     color: var(--team_0001);
 }
 
-
-
-
+/* ===== Franchise 0002 ===== */
 #tabcontent900.franchiselogo_0002 .matchup-card.home span.label,
 #tabcontent900.franchiselogo_0002 .matchup-card.home span.number,
 #tabcontent900.franchiselogo_0002 .matchup-card.home span.at-vs-label,
-#tabcontent900.franchiselogo_0002 .matchup-card.home {
+#tabcontent900.franchiselogo_0002 .matchup-card.home,
+#options_16 .franchise_0002 .matchup-card.home span.label,
+#options_16 .franchise_0002 .matchup-card.home span.number,
+#options_16 .franchise_0002 .matchup-card.home span.at-vs-label,
+#options_16 .franchise_0002 .matchup-card.home {
     color: var(--team_0002);
 }
 
 #tabcontent900.franchiselogo_0002 .matchup-card.away span.label,
 #tabcontent900.franchiselogo_0002 .matchup-card.away span.number,
 #tabcontent900.franchiselogo_0002 .matchup-card.away span.at-vs-label,
-#tabcontent900.franchiselogo_0002 .matchup-card.away {
+#tabcontent900.franchiselogo_0002 .matchup-card.away,
+#options_16 .franchise_0002 .matchup-card.away span.label,
+#options_16 .franchise_0002 .matchup-card.away span.number,
+#options_16 .franchise_0002 .matchup-card.away span.at-vs-label,
+#options_16 .franchise_0002 .matchup-card.away {
     color: var(--team_0002-second);
 }
 
 #tabcontent900.franchiselogo_0002 span,
 #tabcontent900.franchiselogo_0002 span::before,
 #tabcontent900.franchiselogo_0002 caption::before,
-#tabcontent900.franchiselogo_0002 #my_options li::before {
+#tabcontent900.franchiselogo_0002 #my_options li::before,
+#options_16 .franchise_0002 span,
+#options_16 .franchise_0002 span::before,
+#options_16 .franchise_0002 caption::before,
+#options_16 .franchise_0002 #my_options li::before {
     color: var(--team_0002);
 }
 
-
+/* ===== Franchise 0003 ===== */
 #tabcontent900.franchiselogo_0003 .matchup-card.home span.label,
 #tabcontent900.franchiselogo_0003 .matchup-card.home span.number,
 #tabcontent900.franchiselogo_0003 .matchup-card.home span.at-vs-label,
-#tabcontent900.franchiselogo_0003 .matchup-card.home {
+#tabcontent900.franchiselogo_0003 .matchup-card.home,
+#options_16 .franchise_0003 .matchup-card.home span.label,
+#options_16 .franchise_0003 .matchup-card.home span.number,
+#options_16 .franchise_0003 .matchup-card.home span.at-vs-label,
+#options_16 .franchise_0003 .matchup-card.home {
     color: var(--team_0003);
 }
 
 #tabcontent900.franchiselogo_0003 .matchup-card.away span.label,
 #tabcontent900.franchiselogo_0003 .matchup-card.away span.number,
 #tabcontent900.franchiselogo_0003 .matchup-card.away span.at-vs-label,
-#tabcontent900.franchiselogo_0003 .matchup-card.away {
+#tabcontent900.franchiselogo_0003 .matchup-card.away,
+#options_16 .franchise_0003 .matchup-card.away span.label,
+#options_16 .franchise_0003 .matchup-card.away span.number,
+#options_16 .franchise_0003 .matchup-card.away span.at-vs-label,
+#options_16 .franchise_0003 .matchup-card.away {
     color: var(--team_0003-second);
 }
 
 #tabcontent900.franchiselogo_0003 span,
 #tabcontent900.franchiselogo_0003 span::before,
 #tabcontent900.franchiselogo_0003 caption::before,
-#tabcontent900.franchiselogo_0003 #my_options li::before {
+#tabcontent900.franchiselogo_0003 #my_options li::before,
+#options_16 .franchise_0003 span,
+#options_16 .franchise_0003 span::before,
+#options_16 .franchise_0003 caption::before,
+#options_16 .franchise_0003 #my_options li::before {
     color: var(--team_0003);
 }
 
-
-
+/* ===== Franchise 0004 ===== */
 #tabcontent900.franchiselogo_0004 .matchup-card.home span.label,
 #tabcontent900.franchiselogo_0004 .matchup-card.home span.number,
 #tabcontent900.franchiselogo_0004 .matchup-card.home span.at-vs-label,
-#tabcontent900.franchiselogo_0004 .matchup-card.home {
+#tabcontent900.franchiselogo_0004 .matchup-card.home,
+#options_16 .franchise_0004 .matchup-card.home span.label,
+#options_16 .franchise_0004 .matchup-card.home span.number,
+#options_16 .franchise_0004 .matchup-card.home span.at-vs-label,
+#options_16 .franchise_0004 .matchup-card.home {
     color: var(--team_0004);
 }
 
 #tabcontent900.franchiselogo_0004 .matchup-card.away span.label,
 #tabcontent900.franchiselogo_0004 .matchup-card.away span.number,
 #tabcontent900.franchiselogo_0004 .matchup-card.away span.at-vs-label,
-#tabcontent900.franchiselogo_0004 .matchup-card.away {
+#tabcontent900.franchiselogo_0004 .matchup-card.away,
+#options_16 .franchise_0004 .matchup-card.away span.label,
+#options_16 .franchise_0004 .matchup-card.away span.number,
+#options_16 .franchise_0004 .matchup-card.away span.at-vs-label,
+#options_16 .franchise_0004 .matchup-card.away {
     color: var(--team_0004-second);
 }
 
 #tabcontent900.franchiselogo_0004 span,
 #tabcontent900.franchiselogo_0004 span::before,
 #tabcontent900.franchiselogo_0004 caption::before,
-#tabcontent900.franchiselogo_0004 #my_options li::before {
+#tabcontent900.franchiselogo_0004 #my_options li::before,
+#options_16 .franchise_0004 span,
+#options_16 .franchise_0004 span::before,
+#options_16 .franchise_0004 caption::before,
+#options_16 .franchise_0004 #my_options li::before {
     color: var(--team_0004);
 }
 
-
-
+/* ===== Franchise 0005 ===== */
 #tabcontent900.franchiselogo_0005 .matchup-card.home span.label,
 #tabcontent900.franchiselogo_0005 .matchup-card.home span.number,
 #tabcontent900.franchiselogo_0005 .matchup-card.home span.at-vs-label,
-#tabcontent900.franchiselogo_0005 .matchup-card.home {
+#tabcontent900.franchiselogo_0005 .matchup-card.home,
+#options_16 .franchise_0005 .matchup-card.home span.label,
+#options_16 .franchise_0005 .matchup-card.home span.number,
+#options_16 .franchise_0005 .matchup-card.home span.at-vs-label,
+#options_16 .franchise_0005 .matchup-card.home {
     color: var(--team_0005);
 }
 
 #tabcontent900.franchiselogo_0005 .matchup-card.away span.label,
 #tabcontent900.franchiselogo_0005 .matchup-card.away span.number,
 #tabcontent900.franchiselogo_0005 .matchup-card.away span.at-vs-label,
-#tabcontent900.franchiselogo_0005 .matchup-card.away {
+#tabcontent900.franchiselogo_0005 .matchup-card.away,
+#options_16 .franchise_0005 .matchup-card.away span.label,
+#options_16 .franchise_0005 .matchup-card.away span.number,
+#options_16 .franchise_0005 .matchup-card.away span.at-vs-label,
+#options_16 .franchise_0005 .matchup-card.away {
     color: var(--team_0005-second);
 }
 
 #tabcontent900.franchiselogo_0005 span,
 #tabcontent900.franchiselogo_0005 span::before,
 #tabcontent900.franchiselogo_0005 caption::before,
-#tabcontent900.franchiselogo_0005 #my_options li::before {
+#tabcontent900.franchiselogo_0005 #my_options li::before,
+#options_16 .franchise_0005 span,
+#options_16 .franchise_0005 span::before,
+#options_16 .franchise_0005 caption::before,
+#options_16 .franchise_0005 #my_options li::before {
     color: var(--team_0005);
 }
 
-
-
+/* ===== Franchise 0006 ===== */
 #tabcontent900.franchiselogo_0006 .matchup-card.home span.label,
 #tabcontent900.franchiselogo_0006 .matchup-card.home span.number,
 #tabcontent900.franchiselogo_0006 .matchup-card.home span.at-vs-label,
-#tabcontent900.franchiselogo_0006 .matchup-card.home {
+#tabcontent900.franchiselogo_0006 .matchup-card.home,
+#options_16 .franchise_0006 .matchup-card.home span.label,
+#options_16 .franchise_0006 .matchup-card.home span.number,
+#options_16 .franchise_0006 .matchup-card.home span.at-vs-label,
+#options_16 .franchise_0006 .matchup-card.home {
     color: var(--team_0006);
 }
 
 #tabcontent900.franchiselogo_0006 .matchup-card.away span.label,
 #tabcontent900.franchiselogo_0006 .matchup-card.away span.number,
 #tabcontent900.franchiselogo_0006 .matchup-card.away span.at-vs-label,
-#tabcontent900.franchiselogo_0006 .matchup-card.away {
+#tabcontent900.franchiselogo_0006 .matchup-card.away,
+#options_16 .franchise_0006 .matchup-card.away span.label,
+#options_16 .franchise_0006 .matchup-card.away span.number,
+#options_16 .franchise_0006 .matchup-card.away span.at-vs-label,
+#options_16 .franchise_0006 .matchup-card.away {
     color: var(--team_0006-second);
 }
 
 #tabcontent900.franchiselogo_0006 span,
 #tabcontent900.franchiselogo_0006 span::before,
 #tabcontent900.franchiselogo_0006 caption::before,
-#tabcontent900.franchiselogo_0006 #my_options li::before {
+#tabcontent900.franchiselogo_0006 #my_options li::before,
+#options_16 .franchise_0006 span,
+#options_16 .franchise_0006 span::before,
+#options_16 .franchise_0006 caption::before,
+#options_16 .franchise_0006 #my_options li::before {
     color: var(--team_0006);
 }
 
-
-
+/* ===== Franchise 0007 ===== */
 #tabcontent900.franchiselogo_0007 .matchup-card.home span.label,
 #tabcontent900.franchiselogo_0007 .matchup-card.home span.number,
 #tabcontent900.franchiselogo_0007 .matchup-card.home span.at-vs-label,
-#tabcontent900.franchiselogo_0007 .matchup-card.home {
+#tabcontent900.franchiselogo_0007 .matchup-card.home,
+#options_16 .franchise_0007 .matchup-card.home span.label,
+#options_16 .franchise_0007 .matchup-card.home span.number,
+#options_16 .franchise_0007 .matchup-card.home span.at-vs-label,
+#options_16 .franchise_0007 .matchup-card.home {
     color: var(--team_0007);
 }
 
 #tabcontent900.franchiselogo_0007 .matchup-card.away span.label,
 #tabcontent900.franchiselogo_0007 .matchup-card.away span.number,
 #tabcontent900.franchiselogo_0007 .matchup-card.away span.at-vs-label,
-#tabcontent900.franchiselogo_0007 .matchup-card.away {
+#tabcontent900.franchiselogo_0007 .matchup-card.away,
+#options_16 .franchise_0007 .matchup-card.away span.label,
+#options_16 .franchise_0007 .matchup-card.away span.number,
+#options_16 .franchise_0007 .matchup-card.away span.at-vs-label,
+#options_16 .franchise_0007 .matchup-card.away {
     color: var(--team_0007-second);
 }
 
 #tabcontent900.franchiselogo_0007 span,
 #tabcontent900.franchiselogo_0007 span::before,
 #tabcontent900.franchiselogo_0007 caption::before,
-#tabcontent900.franchiselogo_0007 #my_options li::before {
+#tabcontent900.franchiselogo_0007 #my_options li::before,
+#options_16 .franchise_0007 span,
+#options_16 .franchise_0007 span::before,
+#options_16 .franchise_0007 caption::before,
+#options_16 .franchise_0007 #my_options li::before {
     color: var(--team_0007);
 }
 
-
-
+/* ===== Franchise 0008 ===== */
 #tabcontent900.franchiselogo_0008 .matchup-card.home span.label,
 #tabcontent900.franchiselogo_0008 .matchup-card.home span.number,
 #tabcontent900.franchiselogo_0008 .matchup-card.home span.at-vs-label,
-#tabcontent900.franchiselogo_0008 .matchup-card.home {
+#tabcontent900.franchiselogo_0008 .matchup-card.home,
+#options_16 .franchise_0008 .matchup-card.home span.label,
+#options_16 .franchise_0008 .matchup-card.home span.number,
+#options_16 .franchise_0008 .matchup-card.home span.at-vs-label,
+#options_16 .franchise_0008 .matchup-card.home {
     color: var(--team_0008);
 }
 
 #tabcontent900.franchiselogo_0008 .matchup-card.away span.label,
 #tabcontent900.franchiselogo_0008 .matchup-card.away span.number,
 #tabcontent900.franchiselogo_0008 .matchup-card.away span.at-vs-label,
-#tabcontent900.franchiselogo_0008 .matchup-card.away {
+#tabcontent900.franchiselogo_0008 .matchup-card.away,
+#options_16 .franchise_0008 .matchup-card.away span.label,
+#options_16 .franchise_0008 .matchup-card.away span.number,
+#options_16 .franchise_0008 .matchup-card.away span.at-vs-label,
+#options_16 .franchise_0008 .matchup-card.away {
     color: var(--team_0008-second);
 }
 
 #tabcontent900.franchiselogo_0008 span,
 #tabcontent900.franchiselogo_0008 span::before,
 #tabcontent900.franchiselogo_0008 caption::before,
-#tabcontent900.franchiselogo_0008 #my_options li::before {
+#tabcontent900.franchiselogo_0008 #my_options li::before,
+#options_16 .franchise_0008 span,
+#options_16 .franchise_0008 span::before,
+#options_16 .franchise_0008 caption::before,
+#options_16 .franchise_0008 #my_options li::before {
     color: var(--team_0008);
 }
 
-
-
+/* ===== Franchise 0009 ===== */
 #tabcontent900.franchiselogo_0009 .matchup-card.home span.label,
 #tabcontent900.franchiselogo_0009 .matchup-card.home span.number,
 #tabcontent900.franchiselogo_0009 .matchup-card.home span.at-vs-label,
-#tabcontent900.franchiselogo_0009 .matchup-card.home {
+#tabcontent900.franchiselogo_0009 .matchup-card.home,
+#options_16 .franchise_0009 .matchup-card.home span.label,
+#options_16 .franchise_0009 .matchup-card.home span.number,
+#options_16 .franchise_0009 .matchup-card.home span.at-vs-label,
+#options_16 .franchise_0009 .matchup-card.home {
     color: var(--team_0009);
 }
 
 #tabcontent900.franchiselogo_0009 .matchup-card.away span.label,
 #tabcontent900.franchiselogo_0009 .matchup-card.away span.number,
 #tabcontent900.franchiselogo_0009 .matchup-card.away span.at-vs-label,
-#tabcontent900.franchiselogo_0009 .matchup-card.away {
+#tabcontent900.franchiselogo_0009 .matchup-card.away,
+#options_16 .franchise_0009 .matchup-card.away span.label,
+#options_16 .franchise_0009 .matchup-card.away span.number,
+#options_16 .franchise_0009 .matchup-card.away span.at-vs-label,
+#options_16 .franchise_0009 .matchup-card.away {
     color: var(--team_0009-second);
 }
 
 #tabcontent900.franchiselogo_0009 span,
 #tabcontent900.franchiselogo_0009 span::before,
 #tabcontent900.franchiselogo_0009 caption::before,
-#tabcontent900.franchiselogo_0009 #my_options li::before {
+#tabcontent900.franchiselogo_0009 #my_options li::before,
+#options_16 .franchise_0009 span,
+#options_16 .franchise_0009 span::before,
+#options_16 .franchise_0009 caption::before,
+#options_16 .franchise_0009 #my_options li::before {
     color: var(--team_0009);
 }
 
-
-
-
+/* ===== Franchise 0010 ===== */
 #tabcontent900.franchiselogo_0010 .matchup-card.home span.label,
 #tabcontent900.franchiselogo_0010 .matchup-card.home span.number,
 #tabcontent900.franchiselogo_0010 .matchup-card.home span.at-vs-label,
-#tabcontent900.franchiselogo_0010 .matchup-card.home {
+#tabcontent900.franchiselogo_0010 .matchup-card.home,
+#options_16 .franchise_0010 .matchup-card.home span.label,
+#options_16 .franchise_0010 .matchup-card.home span.number,
+#options_16 .franchise_0010 .matchup-card.home span.at-vs-label,
+#options_16 .franchise_0010 .matchup-card.home {
     color: var(--team_0010);
 }
 
 #tabcontent900.franchiselogo_0010 .matchup-card.away span.label,
 #tabcontent900.franchiselogo_0010 .matchup-card.away span.number,
 #tabcontent900.franchiselogo_0010 .matchup-card.away span.at-vs-label,
-#tabcontent900.franchiselogo_0010 .matchup-card.away {
+#tabcontent900.franchiselogo_0010 .matchup-card.away,
+#options_16 .franchise_0010 .matchup-card.away span.label,
+#options_16 .franchise_0010 .matchup-card.away span.number,
+#options_16 .franchise_0010 .matchup-card.away span.at-vs-label,
+#options_16 .franchise_0010 .matchup-card.away {
     color: var(--team_0010-second);
 }
 
 #tabcontent900.franchiselogo_0010 span,
 #tabcontent900.franchiselogo_0010 span::before,
 #tabcontent900.franchiselogo_0010 caption::before,
-#tabcontent900.franchiselogo_0010 #my_options li::before {
+#tabcontent900.franchiselogo_0010 #my_options li::before,
+#options_16 .franchise_0010 span,
+#options_16 .franchise_0010 span::before,
+#options_16 .franchise_0010 caption::before,
+#options_16 .franchise_0010 #my_options li::before {
     color: var(--team_0010);
 }
 
 #tabcontent900 .home .opponent-logo.masked-logo,
-#tabcontent900 .away .opponent-logo.masked-logo {
+#tabcontent900 .away .opponent-logo.masked-logo,
+#options_16 .home .opponent-logo.masked-logo,
+#options_16 .away .opponent-logo.masked-logo {
     width: 80px;
     height: 80px;
     display: inline-block;
@@ -3166,83 +3336,103 @@ table#franchise_schedule.homepagemodule.report caption span::before {
     mask-size: contain;
 }
 
-#tabcontent900.franchiselogo_0001 .home .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0001 .home .opponent-logo.masked-logo,
+#options_16 .franchise_0001 .home .opponent-logo.masked-logo {
     background-color: var(--team_0001);
 }
 
-#tabcontent900.franchiselogo_0001 .away .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0001 .away .opponent-logo.masked-logo,
+#options_16 .franchise_0001 .away .opponent-logo.masked-logo {
     background-color: var(--team_0001-second);
 }
 
-#tabcontent900.franchiselogo_0002 .home .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0002 .home .opponent-logo.masked-logo,
+#options_16 .franchise_0002 .home .opponent-logo.masked-logo {
     background-color: var(--team_0002);
 }
 
-#tabcontent900.franchiselogo_0002 .away .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0002 .away .opponent-logo.masked-logo,
+#options_16 .franchise_0002 .away .opponent-logo.masked-logo {
     background-color: var(--team_0002-second);
 }
 
-#tabcontent900.franchiselogo_0003 .home .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0003 .home .opponent-logo.masked-logo,
+#options_16 .franchise_0003 .home .opponent-logo.masked-logo {
     background-color: var(--team_0003);
 }
 
-#tabcontent900.franchiselogo_0003 .away .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0003 .away .opponent-logo.masked-logo,
+#options_16 .franchise_0003 .away .opponent-logo.masked-logo {
     background-color: var(--team_0003-second);
 }
 
-#tabcontent900.franchiselogo_0004 .home .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0004 .home .opponent-logo.masked-logo,
+#options_16 .franchise_0004 .home .opponent-logo.masked-logo {
     background-color: var(--team_0004);
 }
 
-#tabcontent900.franchiselogo_0004 .away .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0004 .away .opponent-logo.masked-logo,
+#options_16 .franchise_0004 .away .opponent-logo.masked-logo {
     background-color: var(--team_0004-second);
 }
 
-#tabcontent900.franchiselogo_0005 .home .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0005 .home .opponent-logo.masked-logo,
+#options_16 .franchise_0005 .home .opponent-logo.masked-logo {
     background-color: var(--team_0005);
 }
 
-#tabcontent900.franchiselogo_0005 .away .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0005 .away .opponent-logo.masked-logo,
+#options_16 .franchise_0005 .away .opponent-logo.masked-logo {
     background-color: var(--team_0005-second);
 }
 
-#tabcontent900.franchiselogo_0006 .home .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0006 .home .opponent-logo.masked-logo,
+#options_16 .franchise_0006 .home .opponent-logo.masked-logo {
     background-color: var(--team_0006);
 }
 
-#tabcontent900.franchiselogo_0006 .away .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0006 .away .opponent-logo.masked-logo,
+#options_16 .franchise_0006 .away .opponent-logo.masked-logo {
     background-color: var(--team_0006-second);
 }
 
-#tabcontent900.franchiselogo_0007 .home .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0007 .home .opponent-logo.masked-logo,
+#options_16 .franchise_0007 .home .opponent-logo.masked-logo {
     background-color: var(--team_0007);
 }
 
-#tabcontent900.franchiselogo_0007 .away .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0007 .away .opponent-logo.masked-logo,
+#options_16 .franchise_0007 .away .opponent-logo.masked-logo {
     background-color: var(--team_0007-second);
 }
 
-#tabcontent900.franchiselogo_0008 .home .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0008 .home .opponent-logo.masked-logo,
+#options_16 .franchise_0008 .home .opponent-logo.masked-logo {
     background-color: var(--team_0008);
 }
 
-#tabcontent900.franchiselogo_0008 .away .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0008 .away .opponent-logo.masked-logo,
+#options_16 .franchise_0008 .away .opponent-logo.masked-logo {
     background-color: var(--team_0008-second);
 }
 
-#tabcontent900.franchiselogo_0009 .home .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0009 .home .opponent-logo.masked-logo,
+#options_16 .franchise_0009 .home .opponent-logo.masked-logo {
     background-color: var(--team_0009);
 }
 
-#tabcontent900.franchiselogo_0009 .away .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0009 .away .opponent-logo.masked-logo,
+#options_16 .franchise_0009 .away .opponent-logo.masked-logo {
     background-color: var(--team_0009-second);
 }
 
-#tabcontent900.franchiselogo_0010 .home .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0010 .home .opponent-logo.masked-logo,
+#options_16 .franchise_0010 .home .opponent-logo.masked-logo {
     background-color: var(--team_0010);
 }
 
-#tabcontent900.franchiselogo_0010 .away .opponent-logo.masked-logo {
+#tabcontent900.franchiselogo_0010 .away .opponent-logo.masked-logo,
+#options_16 .franchise_0010 .away .opponent-logo.masked-logo {
     background-color: var(--team_0010-second);
 }
 
@@ -3254,10 +3444,50 @@ table#franchise_schedule.homepagemodule.report caption span::before {
     .visual-schedule-container {
         max-height: 600px;
     }
+
+    .schedule-container {
+        max-height: 600px;
+    }
 }
 
 @media (min-width: 1140px) and (max-width: 1239px) {
     .visual-schedule-container {
+        max-height: 1800px;
+    }
+}
+
+@media (min-width: 1500px) and (max-width: 1839px) {
+    .schedule-container {
+        max-height: 600px;
+    }
+}
+
+@media (min-width: 1142px) and (max-width: 1499px) {
+    .schedule-container {
+        max-height: 800px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1141px) {
+    .schedule-container {
+        max-height: 500px;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 999px) {
+    .schedule-container {
+        max-height: 700px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 749px) {
+    .schedule-container {
+        max-height: 800px;
+    }
+}
+
+@media (max-width: 499px) {
+    .schedule-container {
         max-height: 1800px;
     }
 }
@@ -3288,7 +3518,7 @@ table#franchise_schedule.homepagemodule.report caption span::before {
 }
 
 @media (min-width: 415px) and (max-width: 509px) {
-    .visual-schedule-container {
+    #tabcontent900 .visual-schedule-container {
         max-height: 800px;
         transform: scale(0.8);
         transform-origin: center;
@@ -6805,6 +7035,7 @@ th.lh_overall_franchise.fixed-side.hz-hide-shadow {
 #myfantasyleague_tabs .myfantasyleague_tabmenu #homepagetabs li.currenttab a,
 #myfantasyleague_tabs .myfantasyleague_tabmenu #homepagetabs li.currenttab:hover a {
     color: #fff;
+    margin: 0 auto;
 }
 
 #myfantasyleague_tabs .myfantasyleague_tabmenu #homepagetabs li.currenttab,

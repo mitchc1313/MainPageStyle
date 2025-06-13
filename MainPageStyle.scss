@@ -2649,7 +2649,7 @@ table#franchise_schedule.homepagemodule.report caption span::before {
 }
 
 #options_16 .schedule-team-logo {
-    width: 85%;
+    width: 90%;
     height: auto;
     margin: 15px auto;
 }
@@ -3476,7 +3476,7 @@ table#franchise_schedule.homepagemodule.report caption span::before {
 
 @media (min-width: 750px) and (max-width: 999px) {
     .schedule-container {
-        max-height: 700px;
+        max-height: 600px;
     }
 }
 
@@ -3588,6 +3588,15 @@ table#waiver_request_list.report caption {
 
 #add_drop table#waiver_request_list {
     white-space: nowrap;
+}
+
+#add_drop table,
+#add_drop .mobile-wrap {
+    visibility: hidden;
+}
+
+#add_drop span.reportnavigation {
+    display: none;
 }
 
 #add_drop table#waiver_request_list {
@@ -5771,6 +5780,11 @@ td.MFLPaceSpread span.warning.injurystatus::before,
 td.MFLPaceSpread span.warning::before,
 td.MFLPaceSpread span.injurystatus::before {
     display: none;
+}
+
+.MFLPaceSpread span.projected {
+    color: white;
+    font-style: italic;
 }
 
 .warning.projected {

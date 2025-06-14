@@ -2579,6 +2579,11 @@ table#franchise_schedule.homepagemodule.report caption span::before {
     padding-left: 2px;
 }
 
+#options_16 table.report {
+    display: none;
+    visibility: hidden;
+}
+
 .matchup-card {
     display: grid;
     margin: 0;
@@ -3486,11 +3491,24 @@ table#franchise_schedule.homepagemodule.report caption span::before {
     }
 }
 
-@media (max-width: 499px) {
+@media (min-width: 415px) and (max-width: 499px) {
+    .schedule-container {
+        max-height: 800px;
+        transform: scale(0.8);
+        transform-origin: center;
+        margin-top: -70px;
+        margin-bottom: -60px;
+    }
+}
+
+
+@media (max-width: 414px) {
     .schedule-container {
         max-height: 1800px;
     }
 }
+
+
 
 
 @media (min-width: 1065px) and (max-width: 1140px) {
@@ -5799,6 +5817,24 @@ td.MFLPaceSpread span.injurystatus::before {
 #MFLBoxContainer .MFLGameLinks tr {
     height: 1.688rem;
     //background: rgba(0, 0, 0, 0);
+}
+
+#MFLBoxContainer .MFLGameLinks tr.MFLStadiumRow {
+    height: 20px;
+}
+
+#MFLBoxContainer .MFLGameLinks tr.MFLStadiumRow td {
+    font-size: 13px;
+    padding: 0;
+}
+
+#MFLBoxContainer .MFLGameLinks table tr:nth-child(4) {
+    height: 20px;
+}
+
+#MFLBoxContainer .MFLLiveClock {
+    font-size: 13px;
+    padding: 0;
 }
 
 #MFLBoxContainer .MFLGameLinks {

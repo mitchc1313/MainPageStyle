@@ -14733,3 +14733,1308 @@ table#draft_status.homepagemodule.report .oddtablerow {
         padding-left: 30px;
     }
 }
+
+
+// 26. League Rules + News
+
+/***************************************/
+
+
+/* RULES EXANDABLE TABS LIGHT */
+
+
+/***************************************/
+
+#rulestabs {
+    color: var(--main, #080e25)
+}
+
+#rulestabs h4 {
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0
+}
+
+#rulestabs h4 a {
+    font-weight: 400;
+    text-decoration: none
+}
+
+#rulestabs .number_space {
+    width: 4px;
+    display: inline-block
+}
+
+#rulestabs .number-hide {
+    visibility: hidden
+}
+
+#rulestabs .tabhead+div {
+    padding-left: 5px
+}
+
+#rulestabs .subhead+div {
+    padding-left: 22px
+}
+
+#rulestabs p {
+    margin: 5px 0
+}
+
+#rulestabs p a:active,
+#rulestabs p a:visited,
+#rulestabs p a:link {
+    font-weight: 400
+}
+
+#rulestabs p a:hover {
+    text-decoration: underline
+}
+
+a.tabhead,
+a.tabheaddouble {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--primary-color) !important;
+    font-weight: 600
+}
+
+a.tabheaddouble {
+    padding-left: 2px
+}
+
+a.subhead {
+    font-size: 13px;
+    color: var(--main, #080e25) !important;
+    padding-left: 20px;
+    font-weight: 600;
+    text-decoration: none
+}
+
+#rulestabs #monthly_calendar {
+    margin-top: 0
+}
+
+#rulestabs td {
+    text-align: center
+}
+
+#rulestabs td.event {
+    text-align: left
+}
+
+#rulestabs th.event {
+    width: 33%
+}
+
+#rulestabs th.range {
+    width: 33%
+}
+
+#rulestabs td.require {
+    text-align: left
+}
+
+#rulestabs th.limit {
+    width: 200px
+}
+
+#rulestabs .subtext {
+    color: var(--accent, #B82601);
+    margin-left: 20px
+}
+
+@media only screen and (max-width: 720px) {
+    #modal_body_player>table>tbody>tr>td {
+        float: left;
+        width: 100% !important;
+    }
+}
+
+.payoutsimg {
+    max-height: 402px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+li.newshighlightsli::before {
+    display: none;
+}
+
+.playoffnewsgraphic {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.playoffnewsimg {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+}
+
+.wrappernews {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    -ms-grid-rows: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-gap: 1em;
+    grid-template-rows: auto;
+}
+
+.wrappernews>div {
+    padding: 1em;
+}
+
+.standings {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+
+
+}
+
+.bonustracker {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+
+}
+
+.bonustracker {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+}
+
+.highlights {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+}
+
+.highlightlist {
+    display: flex;
+    text-align: center;
+}
+
+.headernews {
+    color: #011a28;
+    text-transform: uppercase;
+    font-weight: normal;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1em;
+    line-height: 80px;
+    text-align: right;
+    padding-right: 1em;
+}
+
+.fantasea {
+    font-weight: 900;
+    font-size: 7.5em;
+    padding-right: 35px;
+    padding-top: 10px;
+    text-align: right;
+    font-family: prohibition, sans-serif;
+    line-height: 90px;
+}
+
+.newsh4 {
+    margin: 0.5em 0 0.5em 0;
+    color: #0097fc;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.title {
+    color: #0097fc;
+}
+
+.bannerimg {
+    height: 400px;
+    width: 400px;
+    padding-top: 1em;
+    margin: auto;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    padding-bottom: 15px;
+    padding-left: 35px;
+}
+
+.subheader {
+    padding-top: 0px;
+    color: #011a28;
+    font-size: 0.5em;
+    line-height: 70px;
+    font-family: "Industry", sans-serif;
+}
+
+.standingstable {
+    border-spacing: 0px;
+    width: 100%;
+    text-align: left;
+}
+
+th.stats {
+    background: #011a28;
+    color: white;
+    padding-left: 10px;
+}
+
+th.franchiseheader {
+    background: #011a28;
+    color: white;
+    padding-left: 10px;
+}
+
+.tablerownews {
+    border: none;
+    padding-left: 10px;
+}
+
+.statsdata {
+    padding-left: 10px;
+}
+
+.newsh2 {
+
+    color: #0097fc;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 30px;
+
+    background: none;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.wlt {
+    font-weight: bold;
+    text-align: center;
+}
+
+.playofftable {
+    height: 70%;
+}
+
+.divider {
+    background: #0097fc;
+    height: 10px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 1em;
+    width: 95%;
+}
+
+ul {
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
+.newshighlightsli {
+    list-style-type: none;
+    padding-left: 5px;
+    flex-basis: 100%;
+}
+
+.highlightimg {
+    height: 75px;
+    width: 75px;
+}
+
+.fantasea {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    padding-right: 0.25em;
+}
+
+.standingstable {
+    height: 80%;
+    padding-bottom: 0em;
+}
+
+.statsdata {
+    text-align: center;
+}
+
+.stats {
+    text-align: center;
+}
+
+.newsp {
+    padding-left: .75em;
+    padding-right: .75em;
+    font-size: 1.25em;
+}
+
+.bonustable {
+    width: 100%;
+    border-spacing: 0px;
+    text-align: left;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    .wrappernews {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+    }
+
+    .playoffnewsimg {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        grid-row: 1/3;
+    }
+
+    .standings {
+        -ms-grid-row: 1;
+        grid-row: 1;
+        -ms-grid-column: 1;
+        grid-column: 1;
+
+    }
+
+    .bonustracker {
+        -ms-grid-column: 1;
+        grid-column: 1;
+        -ms-grid-row: 2;
+        grid-row: 2;
+
+    }
+
+    .highlights {
+        -ms-grid-row: 3;
+        grid-row: 3;
+        -ms-grid-column: 1;
+        grid-column: 1;
+        margin-top: 3em;
+    }
+
+    .highlightlist {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    ul.highlightlist {
+        padding-left: 0rem !important;
+    }
+
+    .headernews {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        padding-right: 0;
+    }
+
+    .fantasea {
+        font-weight: 900;
+        font-size: 5em;
+        text-align: center;
+        line-height: 70px;
+    }
+
+    .newsh4 {
+        margin: 0.5em 0 0.5em 0;
+        color: #0097fc;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        font-weight: 900;
+    }
+
+    .bannerimg {
+        height: 200px;
+        width: 200px;
+        margin: auto;
+        -ms-grid-column: 1;
+        grid-column: 1;
+        -ms-grid-row: 1;
+        grid-row: 1;
+        padding-bottom: 0;
+        padding-top: 0;
+        padding-left: 0;
+        margin-top: 25px;
+    }
+
+    .subheader {
+        padding-top: 0px;
+        color: var(--primary-color);
+        font-size: 2rem;
+        line-height: 140px;
+        font-family: "Industry", sans-serif;
+    }
+
+    .standingstable {
+        border-spacing: 0px;
+        width: 100%;
+        text-align: left;
+    }
+
+    th.stats {
+        background: #011a28;
+        color: white;
+        padding-left: 10px;
+    }
+
+    th.franchiseheader {
+        background: #011a28;
+        color: white;
+        padding-left: 10px;
+    }
+
+    .tablerownews {
+        border: none;
+        padding-left: 10px;
+    }
+
+    .statsdata {
+        padding-left: 10px;
+    }
+
+    .newsh2 {
+
+        color: #0097fc;
+        text-transform: uppercase;
+        font-size: 2em;
+
+        background: none;
+        text-align: left;
+    }
+
+    .wlt {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .playofftable {
+        height: 70%;
+    }
+
+    .divider {
+        background: #0097fc;
+        height: 10px;
+        border-radius: 10px;
+        margin: auto;
+        margin-bottom: 1em;
+        width: 95%;
+        margin-top: 1em;
+    }
+
+    ul {
+        padding-left: 0px;
+        margin-top: 0px;
+    }
+
+    .newshighlightsli {
+        list-style-type: none;
+        padding-left: 5px;
+        margin-top: 2em;
+    }
+
+    .highlightimg {
+        height: 75px;
+        width: 75px;
+    }
+
+    .fantasea {
+        -ms-grid-column: 1;
+        grid-column: 1;
+        padding-right: 0;
+    }
+
+    .standingstable {
+        height: 80%;
+        padding-bottom: 0em;
+    }
+
+    .statsdata {
+        text-align: center;
+    }
+
+    .stats {
+        text-align: center;
+    }
+
+    .newsp {
+        padding-left: .75em;
+        padding-right: .75em;
+        font-size: 1.25em;
+    }
+
+    .bonustable {
+        width: 100%;
+        border-spacing: 0px;
+        text-align: left;
+    }
+
+    td.td_hide_news {
+        display: none;
+    }
+
+    th.th_hide_news {
+        display: none;
+    }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
+    .playoffnewsimg {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        grid-row: 1/3;
+    }
+
+    .wrappernews {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+    }
+
+    .wrappernews>div {
+        padding: 1em;
+    }
+
+    .standings {
+        -ms-grid-row: 1;
+        grid-row: 1;
+        -ms-grid-column: 1;
+        grid-column: 1;
+
+    }
+
+    .bonustracker {
+        -ms-grid-column: 1;
+        grid-column: 1;
+        -ms-grid-row: 2;
+        grid-row: 2;
+
+    }
+
+    .highlights {
+        -ms-grid-row: 3;
+        grid-row: 3;
+        -ms-grid-column: 1;
+        grid-column: 1;
+        margin-top: 3em;
+    }
+
+    .highlightlist {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .newshighlightsli {
+        padding-left: 0;
+    }
+
+    .headernews {
+        color: #011a28;
+        text-transform: uppercase;
+        font-weight: normal;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+        line-height: 80px;
+        text-align: right;
+        padding-right: 0;
+    }
+
+    .fantasea {
+        font-weight: 900;
+        font-size: 5em;
+        padding-right: 0;
+        padding-top: 0px;
+        text-align: center;
+        font-family: prohibition, sans-serif;
+        line-height: 70px;
+        margin-bottom: 0;
+    }
+
+    .newsh4 {
+        margin: 0.5em 0 0.5em 0;
+        color: #0097fc;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        font-weight: 900;
+    }
+
+    .title {
+        color: #0097fc;
+    }
+
+    .bannerimg {
+        height: 200px;
+        width: 200px;
+        margin: auto;
+        -ms-grid-column: 1;
+        grid-column: 1;
+        -ms-grid-row: 1;
+        grid-row: 1;
+        padding-bottom: 0;
+        padding-top: 0;
+        padding-left: 0;
+        margin-top: 25px;
+    }
+
+    .subheader {
+        padding-top: 0px;
+        color: var(--primary-color);
+        font-size: 2rem;
+        line-height: 150px;
+        font-family: "Industry", sans-serif;
+    }
+
+    .standingstable {
+        border-spacing: 0px;
+        width: 100%;
+        text-align: left;
+    }
+
+    th.stats {
+        background: #011a28;
+        color: white;
+        padding-left: 10px;
+    }
+
+    th.franchiseheader {
+        background: #011a28;
+        color: white;
+        padding-left: 10px;
+    }
+
+    .tablerownews {
+        border: none;
+        padding-left: 10px;
+    }
+
+    .statsdata {
+        padding-left: 10px;
+    }
+
+    .newsh2 {
+
+        color: #0097fc;
+        text-transform: uppercase;
+        font-size: 2em;
+
+        background: none;
+        text-align: left;
+    }
+
+    .wlt {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .playofftable {
+        height: 70%;
+    }
+
+    .divider {
+        background: #0097fc;
+        height: 10px;
+        border-radius: 10px;
+        margin: auto;
+        margin-bottom: 1em;
+        width: 95%;
+        margin-top: 1em;
+    }
+
+    ul {
+        padding-left: 0px;
+        margin-top: 0px;
+    }
+
+    .newshighlightsli {
+        list-style-type: none;
+        padding-left: 5px;
+        margin-top: 2em;
+    }
+
+    .highlightimg {
+        height: 75px;
+        width: 75px;
+    }
+
+    .fantasea {
+        -ms-grid-column: 1;
+        grid-column: 1;
+        padding-right: 0;
+    }
+
+    .standingstable {
+        height: 80%;
+        padding-bottom: 0em;
+    }
+
+    .statsdata {
+        text-align: center;
+    }
+
+    .stats {
+        text-align: center;
+    }
+
+    .newsp {
+        padding-left: .75em;
+        padding-right: .75em;
+        font-size: 1.25em;
+    }
+
+    .bonustable {
+        width: 100%;
+        border-spacing: 0px;
+        text-align: left;
+    }
+
+    td.td_hide_news {
+        display: none;
+    }
+
+    th.th_hide_news {
+        display: none;
+    }
+}
+
+@media only screen and (min-device-width: 834px) and (max-device-width: 1194px) and (-webkit-min-device-pixel-ratio: 2) {
+    .playoffnewsimg {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        grid-row: 1/3;
+    }
+
+    .wrappernews {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+        -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 1em;
+    }
+
+    .wrappernews>div {
+        padding: 1em;
+    }
+
+    .standings {
+        -ms-grid-row: 1;
+        grid-row: 1;
+        -ms-grid-column: 1;
+        grid-column: 1;
+
+    }
+
+    .bonustracker {
+        -ms-grid-column: 1;
+        grid-column: 1;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+        grid-row: 1/2;
+
+    }
+
+    .bonustracker {
+        -ms-grid-column: 2;
+        grid-column: 2;
+        -ms-grid-row: 1;
+        grid-row: 1;
+    }
+
+    .highlights {
+        -ms-grid-row: 2;
+        grid-row: 2;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+        grid-column: 1/3;
+    }
+
+    .highlightlist {
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+    }
+
+    .headernews {
+        color: #011a28;
+        text-transform: uppercase;
+        font-weight: normal;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 1em;
+        line-height: 80px;
+        text-align: right;
+        padding-right: 1em;
+    }
+
+    .fantasea {
+        font-weight: 900;
+        font-size: 7.5em;
+        padding-right: 35px;
+        padding-top: 10px;
+        text-align: right;
+        font-family: prohibition, sans-serif;
+        line-height: 90px;
+    }
+
+    .newsh4 {
+        margin: 0.5em 0 0.5em 0;
+        color: #0097fc;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        font-weight: 900;
+    }
+
+    .title {
+        color: #0097fc;
+    }
+
+    .bannerimg {
+        height: 400px;
+        width: 400px;
+        padding-top: 1em;
+        margin: auto;
+        -ms-grid-column: 1;
+        grid-column: 1;
+        -ms-grid-row: 1;
+        grid-row: 1;
+        padding-bottom: 15px;
+        padding-left: 35px;
+    }
+
+    .subheader {
+        padding-top: 0px;
+        color: #011a28;
+        font-size: 0.5em;
+        line-height: 70px;
+        font-family: "Industry", sans-serif;
+    }
+
+    .standingstable {
+        border-spacing: 0px;
+        width: 100%;
+        text-align: left;
+    }
+
+    th.stats {
+        background: #011a28;
+        color: white;
+        padding-left: 10px;
+    }
+
+    th.franchiseheader {
+        background: #011a28;
+        color: white;
+        padding-left: 10px;
+    }
+
+    .tablerownews {
+        border: none;
+        padding-left: 10px;
+    }
+
+    .statsdata {
+        padding-left: 10px;
+    }
+
+    .newsh2 {
+
+        color: #0097fc;
+        text-transform: uppercase;
+        font-size: 2em;
+
+        margin-top: 20px;
+        background: none;
+        text-align: left;
+    }
+
+    .wlt {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .playofftable {
+        height: 70%;
+    }
+
+    .divider {
+        background: #0097fc;
+        height: 10px;
+        border-radius: 10px;
+        margin: auto;
+        margin-bottom: 1em;
+        width: 95%;
+    }
+
+    ul {
+        padding-left: 0px;
+        margin-top: 0px;
+    }
+
+    .newshighlightsli {
+        list-style-type: none;
+        padding-left: 5px;
+    }
+
+    .highlightimg {
+        height: 75px;
+        width: 75px;
+    }
+
+    .fantasea {
+        -ms-grid-column: 2;
+        grid-column: 2;
+        padding-right: 0.25em;
+    }
+
+    .standingstable {
+        height: 80%;
+        padding-bottom: 0em;
+    }
+
+    .statsdata {
+        text-align: center;
+    }
+
+    .stats {
+        text-align: center;
+    }
+
+    .newsp {
+        padding-left: .75em;
+        padding-right: .75em;
+        font-size: 1.25em;
+    }
+
+    .bonustable {
+        width: 100%;
+        border-spacing: 0px;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    .bonustracker {
+        -ms-grid-column: 1;
+        grid-column: 1;
+        -ms-grid-row: 2;
+        grid-row: 2;
+
+    }
+
+    .playoffnewsimg {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        grid-row: 1/3;
+    }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .playoffnewsimg {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        grid-row: 1/3;
+    }
+
+    .wrappernews {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 1em;
+    }
+
+    .bonustracker {
+        -ms-grid-column: 1;
+        grid-column: 1;
+        -ms-grid-row: 2;
+        grid-row: 2;
+
+    }
+
+    .highlights {
+        margin-top: 1em;
+    }
+
+    .highlightlist {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-device-width: 834px) and (max-device-width: 1194px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .playoffnewsimg {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        grid-row: 1/3;
+    }
+
+    .highlightlist {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .highlights {
+        margin-top: 3em;
+        -ms-grid-row: 4;
+        grid-row: 4;
+    }
+
+    .wrappernews {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1em;
+    }
+
+    .bonustracker {
+        -ms-grid-column: 2;
+        grid-column: 2;
+        -ms-grid-row: 1;
+        grid-row: 1;
+
+    }
+}
+
+@media only screen and (min-width: 1195px) {
+    .highlightlist {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .highlights {
+        margin-top: 0em;
+    }
+
+    .wrappernews {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1em;
+    }
+
+    .bonustracker {
+        -ms-grid-column: 2;
+        grid-column: 2;
+        -ms-grid-row: 1;
+        grid-row: 1;
+
+    }
+
+    .fantasea {
+        font-size: 8.5em;
+        line-height: 96px;
+    }
+
+    .subheader {
+        color: var(--primary-color);
+        font-size: 4.5rem;
+        line-height: 75px;
+    }
+}
+
+@media only screen and (min-width: 2333px) {
+    .fantasea {
+        font-size: 13em;
+        line-height: 145px;
+    }
+
+    .subheader {
+        color: var(--primary-color);
+        font-size: 4.5rem;
+        line-height: 90px;
+    }
+}
+
+@media only screen and (min-width: 1404px) {
+    .fantasea {
+        font-size: 8.5em;
+        line-height: 90px;
+    }
+}
+
+@media only screen and (min-width: 2128px) {
+    .fantasea {
+        font-size: 9.5em;
+        line-height: 90px;
+    }
+}
+
+/***************************************/
+
+
+/* RULES EXANDABLE TABS LIGHT */
+
+
+/***************************************/
+
+#rulestabs {
+    color: var(--dark-color)
+}
+
+#rulestabs h4 {
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0;
+    margin-bottom: 20px;
+}
+
+#rulestabs h4 a {
+    font-weight: 400;
+    text-decoration: none
+}
+
+#rulestabs .number_space {
+    width: 4px;
+    display: inline-block
+}
+
+#rulestabs .number-hide {
+    visibility: hidden
+}
+
+#rulestabs .tabhead+div {
+    padding-left: 5px;
+    margin-bottom: 30px
+}
+
+#rulestabs .subhead+div {
+    padding-left: 40px
+}
+
+#rulestabs p {
+    margin: 10px 0;
+}
+
+#rulestabs p a:active,
+#rulestabs p a:visited,
+#rulestabs p a:link {
+    font-weight: 400
+}
+
+#rulestabs p a:hover {
+    text-decoration: underline
+}
+
+a.tabhead,
+a.tabheaddouble {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--primary-color) !important;
+    font-weight: 600
+}
+
+a.tabheaddouble {
+    padding-left: 2px
+}
+
+a.subhead {
+    font-size: 13px;
+    color: var(--dark-color);
+    padding-left: 20px;
+    font-weight: 600;
+    text-decoration: none
+}
+
+#rulestabs #monthly_calendar {
+    margin-top: 0
+}
+
+#rulestabs td {
+    text-align: center;
+}
+
+#rulestabs td.events,
+#rulestabs td.event,
+#rulestabs td.points,
+#rulestabs td.range {
+    text-align: left;
+    border-bottom: solid 2px #f0f0f0;
+}
+
+#rulestabs th.events,
+#rulestabs th.event,
+#rulestabs th.points {
+    width: 33%;
+    background-color: var(--dark-color);
+    color: white;
+}
+
+#rulestabs th.range {
+    width: 33%;
+    background-color: var(--dark-color);
+    color: white;
+}
+
+#rulestabs td.require {
+    text-align: left
+}
+
+#rulestabs th.limit {
+    width: 200px
+}
+
+#rulestabs .subtext {
+    color: var(--dark-color);
+    margin-left: 20px;
+    margin-top: 3px;
+}
+
+#rulestabs .sub-content ul {
+    margin: 10px 0 !important;
+}
+
+#rulebanner #custom-reports .mobile-wrap {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+li.newsruleslist::before {
+    display: none;
+}
+
+.“newsrules” li {
+    list-style-type: none;
+}
+
+.newsruleslist {
+    list-style-type: decimal;
+}
+
+.newsruleslist p {
+    font-weight: 500;
+}
+
+#options_26 a,
+#options_26 a:hover,
+#options_26 a:active,
+#options_26 a:visited {
+    color: white;
+}

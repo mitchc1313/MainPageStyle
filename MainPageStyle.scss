@@ -112,6 +112,10 @@
     display: none;
 }
 
+#ad_position_box {
+    display: none !important;
+}
+
 .fa-circle-exclamation:before,
 .fa-exclamation-circle:before {
     content: "\f06a";
@@ -10830,6 +10834,22 @@ li.newshighlightsli::before {
     grid-column: 2;
     -ms-grid-row: 1;
     grid-row: 1;
+    width: 100%;
+    /* take full container width */
+    height: 50vh;
+    /* half the viewport height (example) */
+    position: relative;
+    /* required for Chart.js scaling */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5em !important;
+}
+
+#myChart {
+    flex: 1;
+    /* fill all available space */
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .highlights {
@@ -10867,6 +10887,7 @@ li.newshighlightsli::before {
     text-align: right;
     font-family: 'Industry', sans-serif;
     line-height: 90px;
+    color: var(--dark-color);
 }
 
 .newsh4 {
@@ -10896,7 +10917,7 @@ li.newshighlightsli::before {
 
 .subheader {
     padding-top: 0px;
-    color: var(--dark-color);
+    color: var(--primary-color);
     font-size: 0.5em;
     line-height: 70px;
     font-family: "Industry", sans-serif;
@@ -11018,6 +11039,8 @@ th.franchiseheader {
 
 
 
+
+
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
 
 
@@ -11029,7 +11052,6 @@ th.franchiseheader {
     .highlights {
         -ms-grid-row: 3;
         grid-row: 3;
-        -ms-grid-column: 1;
         grid-column: 1;
         margin-top: 1em;
     }
@@ -11065,6 +11087,9 @@ th.franchiseheader {
         font-size: 52px;
         text-align: center;
         line-height: 42px;
+        -ms-grid-column: 1;
+        grid-column: 1;
+        padding-right: 0;
     }
 
     .bannerimg {
@@ -11078,7 +11103,6 @@ th.franchiseheader {
 
     .subheader {
         font-size: 30px;
-        line-height: 70px;
     }
 
     .newsh2 {
@@ -11087,12 +11111,6 @@ th.franchiseheader {
 
     .divider {
         margin-top: 1em;
-    }
-
-    .fantasea {
-        -ms-grid-column: 1;
-        grid-column: 1;
-        padding-right: 0;
     }
 
     td.td_hide_news {
@@ -11124,10 +11142,6 @@ th.franchiseheader {
     #body_standings th.total_potential_points,
     #body_standings td.total_potential_points {
         display: none;
-    }
-
-    .payoutsimg {
-        max-height: 278px;
     }
 
     p.newsp2 {
@@ -11231,6 +11245,8 @@ th.franchiseheader {
         -ms-grid-column: 1;
         grid-column: 1;
         padding-right: 0;
+        font-size: 60px;
+        line-height: 50px;
     }
 
     td.td_hide_news {
@@ -11395,7 +11411,6 @@ th.franchiseheader {
 
     .subheader {
         padding-top: 0px;
-        color: var(--dark-color);
         font-size: 42px;
         line-height: 70px;
         font-family: "Industry", sans-serif;
@@ -11630,7 +11645,6 @@ th.franchiseheader {
     }
 
     .subheader {
-        color: var(--dark-color);
         font-size: 50px;
         line-height: 75px;
     }
@@ -11644,7 +11658,6 @@ th.franchiseheader {
     }
 
     .subheader {
-        color: var(--dark-color);
         font-size: 50px;
         line-height: 90px;
     }
@@ -14986,7 +14999,7 @@ li.newshighlightsli::before {
     padding-right: 35px;
     padding-top: 10px;
     text-align: right;
-    font-family: prohibition, sans-serif;
+    font-family: 'Industry', sans-serif;
     line-height: 90px;
 }
 
@@ -15017,7 +15030,6 @@ li.newshighlightsli::before {
 
 .subheader {
     padding-top: 0px;
-    color: #011a28;
     font-size: 0.5em;
     line-height: 70px;
     font-family: "Industry", sans-serif;
@@ -15184,9 +15196,9 @@ ul {
 
     .fantasea {
         font-weight: 900;
-        font-size: 5em;
+        font-size: 60px;
         text-align: center;
-        line-height: 70px;
+        line-height: 50px;
     }
 
     .newsh4 {
@@ -15215,7 +15227,7 @@ ul {
         padding-top: 0px;
         color: var(--primary-color);
         font-size: 2rem;
-        line-height: 140px;
+        line-height: 80px;
         font-family: "Industry", sans-serif;
     }
 
@@ -15331,7 +15343,7 @@ ul {
     }
 }
 
-@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 1px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
     .playoffnewsimg {
         -ms-grid-row: 1;
         -ms-grid-row-span: 2;
@@ -15400,12 +15412,12 @@ ul {
 
     .fantasea {
         font-weight: 900;
-        font-size: 5em;
+        font-size: 60px;
         padding-right: 0;
         padding-top: 0px;
         text-align: center;
-        font-family: prohibition, sans-serif;
-        line-height: 70px;
+        font-family: 'Industry', sans-serif;
+        line-height: 50px;
         margin-bottom: 0;
     }
 
@@ -15439,7 +15451,7 @@ ul {
         padding-top: 0px;
         color: var(--primary-color);
         font-size: 2rem;
-        line-height: 150px;
+        line-height: 80px;
         font-family: "Industry", sans-serif;
     }
 
@@ -15634,7 +15646,7 @@ ul {
         padding-right: 35px;
         padding-top: 10px;
         text-align: right;
-        font-family: prohibition, sans-serif;
+        font-family: 'Industry', sans-serif;
         line-height: 90px;
     }
 
@@ -15651,8 +15663,8 @@ ul {
     }
 
     .bannerimg {
-        height: 400px;
-        width: 400px;
+        height: 250px;
+        width: 250px;
         padding-top: 1em;
         margin: auto;
         -ms-grid-column: 1;
@@ -15665,7 +15677,6 @@ ul {
 
     .subheader {
         padding-top: 0px;
-        color: #011a28;
         font-size: 0.5em;
         line-height: 70px;
         font-family: "Industry", sans-serif;
@@ -15678,13 +15689,13 @@ ul {
     }
 
     th.stats {
-        background: #011a28;
+        background: var(--dark-color);
         color: white;
         padding-left: 10px;
     }
 
     th.franchiseheader {
-        background: #011a28;
+        background: var(--dark-color);
         color: white;
         padding-left: 10px;
     }
@@ -15790,7 +15801,7 @@ ul {
     }
 }
 
-@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+@media only screen and (min-device-width: 1px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
     .playoffnewsimg {
         -ms-grid-row: 1;
         -ms-grid-row-span: 2;
@@ -15891,11 +15902,10 @@ ul {
 
     .fantasea {
         font-size: 8.5em;
-        line-height: 96px;
+        line-height: 104px;
     }
 
     .subheader {
-        color: var(--primary-color);
         font-size: 4.5rem;
         line-height: 75px;
     }
@@ -15904,11 +15914,10 @@ ul {
 @media only screen and (min-width: 2333px) {
     .fantasea {
         font-size: 13em;
-        line-height: 145px;
+        line-height: 124px;
     }
 
     .subheader {
-        color: var(--primary-color);
         font-size: 4.5rem;
         line-height: 90px;
     }
@@ -15917,14 +15926,14 @@ ul {
 @media only screen and (min-width: 1404px) {
     .fantasea {
         font-size: 8.5em;
-        line-height: 90px;
+        line-height: 124px;
     }
 }
 
 @media only screen and (min-width: 2128px) {
     .fantasea {
         font-size: 9.5em;
-        line-height: 90px;
+        line-height: 124px;
     }
 }
 
@@ -16988,4 +16997,3 @@ li.newsruleslist::before {
 #contest_lineup #tableCounter tr th:first-child {
     text-align: left !important;
 }
-

@@ -2593,7 +2593,7 @@ table#franchise_schedule.homepagemodule.report caption span::before {
     margin: 0;
     align-items: center;
     justify-content: center;
-    grid-template-columns: 50px 110px 26px;
+    grid-template-columns: 50px 130px 26px;
     border-bottom: dashed 2px var(--grey-color);
 }
 
@@ -3449,7 +3449,7 @@ table#franchise_schedule.homepagemodule.report caption span::before {
 
 
 
-@media (min-width: 1840px) and (max-width: 2450px) {
+@media (min-width: 2050px) and (max-width: 2450px) {
     .visual-schedule-container {
         max-height: 600px;
     }
@@ -3459,7 +3459,7 @@ table#franchise_schedule.homepagemodule.report caption span::before {
     }
 }
 
-@media (min-width: 1140px) and (max-width: 1239px) {
+@media (min-width: 1140px) and (max-width: 1375px) {
     .visual-schedule-container {
         max-height: 1800px;
     }
@@ -3523,23 +3523,23 @@ table#franchise_schedule.homepagemodule.report caption span::before {
 
 @media (min-width: 980px) and (max-width: 1064px) {
     .visual-schedule-container {
-        max-height: 500px;
+        max-height: 600px;
     }
 }
 
-@media (min-width: 745px) and (max-width: 979px) {
+@media (min-width: 820px) and (max-width: 979px) {
     .visual-schedule-container {
         max-height: 600px;
     }
 }
 
-@media (min-width: 510px) and (max-width: 744px) {
+@media (min-width: 575px) and (max-width: 819px) {
     .visual-schedule-container {
         max-height: 800px;
     }
 }
 
-@media (min-width: 415px) and (max-width: 509px) {
+@media (min-width: 460px) and (max-width: 574px) {
     #tabcontent900 .visual-schedule-container {
         max-height: 800px;
         transform: scale(0.8);
@@ -3552,7 +3552,7 @@ table#franchise_schedule.homepagemodule.report caption span::before {
     }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 459px) {
     .visual-schedule-container {
         max-height: 1800px;
     }
@@ -3560,7 +3560,7 @@ table#franchise_schedule.homepagemodule.report caption span::before {
 
 @media (min-width: 2451px) {
     .visual-schedule-container {
-        max-height: 500px;
+        max-height: 600px;
     }
 }
 

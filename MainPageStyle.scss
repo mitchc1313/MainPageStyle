@@ -3776,13 +3776,16 @@ span.injurystatus::after {
 #body_top span.injurystatus::after,
 #body_top span.warning.injurystatus::before,
 #body_top span.warning::before,
-#body_top span.injurystatus::before,
+#body_top span.injurystatus::before
+
+/* ,
 #body_lineup span.warning.injurystatus::after,
 #body_lineup span.warning::after,
 #body_lineup span.injurystatus::after,
 #body_lineup span.warning.injurystatus::before,
 #body_lineup span.warning::before,
-#body_lineup span.injurystatus::before {
+#body_lineup span.injurystatus::before */
+    {
     display: none;
 }
 
@@ -4544,7 +4547,8 @@ a.last_name_roster {
 #options_177 .team_bye_roster,
 #body_top .team_bye_roster,
 #options_37 .team_bye_roster,
-#options_209 .team_bye_roster {
+#options_209 .team_bye_roster,
+#lineup .team_bye_roster {
     display: none;
 }
 
@@ -4595,7 +4599,8 @@ a.last_name_roster {
 #options_177 div.acquired_td,
 #body_top div.acquired_td,
 #options_37 div.acquired_td,
-#options_209 div.acquired_td {
+#options_209 div.acquired_td,
+#lineup div.acquired_td {
     display: none;
 }
 
@@ -5045,6 +5050,23 @@ div.position_name_roster.fa {
 #options_07 .franchise_0010 td.trade a {
     color: var(--team_0010);
 }
+
+.my-roster-grid .lineupContainer .player-card {
+    grid-template-columns: 55px 62px auto 1fr 1fr;
+}
+
+.my-roster-grid .lineupContainer .player-card .player-projected-points {
+    padding-right: 30px;
+    grid-column: 5;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.my-roster-grid .lineupContainer .player-card .player-projected-points::before {
+    left: -38px
+}
+
+
 
 #roster,
 #options_07 .report {
@@ -12271,6 +12293,10 @@ body#body_add_drop form input[type="submit"]:hover {
 #add_drop .fa-solid {
     padding: 0;
     width: unset;
+}
+
+.fa-solid.fa-lock {
+    padding: 0;
 }
 
 .player-wproj {

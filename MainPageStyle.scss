@@ -63,7 +63,7 @@
     --team_0007-abbr: "CDS";
     --team_0008-abbr: "PDB";
     --team_0009-abbr: "CUCK";
-    --team_0010-abbr: "JBH";
+    --team_0010-abbr: "HBJ";
     --4keepers: 4;
     --3keepers: 3;
     --2keepers: 2;
@@ -2725,6 +2725,7 @@ table#franchise_schedule.homepagemodule.report caption span::before {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 90px;
 }
 
 .schedule-legend {
@@ -3548,7 +3549,7 @@ table#franchise_schedule.homepagemodule.report caption span::before {
     }
 
     .flexholder.my-schedule-grid {
-        height: 655px;
+        height: 715px;
     }
 }
 
@@ -5055,6 +5056,12 @@ div.position_name_roster.fa {
     grid-template-columns: 55px 62px auto 1fr 1fr;
 }
 
+.my-roster-grid #lineup-container caption {
+    width: 93%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
 .my-roster-grid .lineupContainer .player-card .player-projected-points {
     padding-right: 30px;
     grid-column: 5;
@@ -5064,6 +5071,22 @@ div.position_name_roster.fa {
 
 .my-roster-grid .lineupContainer .player-card .player-projected-points::before {
     left: -38px
+}
+
+@media screen and (max-width: 950px) {
+    .my-roster-grid .lineupContainer .player-card {
+        width: 93%;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .my-roster-grid .lineupContainer .player-card .player-projected-points {
+        padding-right: 20px;
+    }
+
+    .my-roster-grid .lineupContainer .player-card .player-projected-points::before {
+        left: -22px;
+    }
 }
 
 
@@ -7767,10 +7790,27 @@ div#TeamDetails.detailsReportWrap {
 .target_report .headshot {
     height: 85% !important;
     width: 85% !important;
+    border: solid 2px #d9d9d9;
+    background-color: #e7e7e7;
+
+}
+
+.target_report td.inj b.warning {
+    top: .2rem !important;
+    left: 2rem !important;
+}
+
+.target_report tr.previous_starter td.pphoto:before {
+    display: none;
+}
+
+.target_report tr.lineup_player_row {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .target_report tr.lineup_player_row td.pos-rank {
-    left: 0 !important;
+    left: -3px !important;
     bottom: -4px !important;
     color: var(--dark-color);
     font-weight: 900;
@@ -9040,6 +9080,7 @@ td.two_column_layout {
 
 #options_06 td caption span img {
     max-width: 100%;
+    padding-bottom: 10px;
 }
 
 #lineup #benchtable {
@@ -10554,257 +10595,173 @@ td#LS_AwayTeamPercent.franchiseicon_0010 {
 
 // 15. Newsletter
 
-#weekly_newsletter .franchisename img {
+/* Shared avatar size */
+:is(#weekly_newsletter, #standings) .franchisename img {
     width: 40px;
     height: 40px;
 }
 
+#weekly_newsletter th {
+    background: none;
+}
+
+/* Name row alignment */
+#weekly_newsletter .franchisename,
+#standings .franchisename {
+    display: flex;
+    align-items: center;
+    /* replaces align-content need */
+}
+
+/* Logo row */
 #weekly_newsletter .news-logo-container {
     display: flex;
     gap: 10px;
 }
 
-#weekly_newsletter .franchisename {
-    display: flex;
-    align-items: center;
+/* Franchise link base style (shared) */
+:is(#weekly_newsletter, #standings) .franchisename a[class^="franchise_"] {
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
-#weekly_newsletter .franchisename a.franchise_0001,
-#standings .franchisename a.franchise_0001 {
+/* Per-team colors (unique bit) */
+:is(#weekly_newsletter, #standings) .franchisename a.franchise_0001 {
     color: var(--team_0001);
-    font-weight: 900;
-    text-transform: uppercase;
 }
 
-#weekly_newsletter .franchisename a.franchise_0002,
-#standings .franchisename a.franchise_0002 {
+:is(#weekly_newsletter, #standings) .franchisename a.franchise_0002 {
     color: var(--team_0002);
-    font-weight: 900;
-    text-transform: uppercase;
 }
 
-#weekly_newsletter .franchisename a.franchise_0003,
-#standings .franchisename a.franchise_0003 {
+:is(#weekly_newsletter, #standings) .franchisename a.franchise_0003 {
     color: var(--team_0003);
-    font-weight: 900;
-    text-transform: uppercase;
 }
 
-#weekly_newsletter .franchisename a.franchise_0004,
-#standings .franchisename a.franchise_0004 {
+:is(#weekly_newsletter, #standings) .franchisename a.franchise_0004 {
     color: var(--team_0004);
-    font-weight: 900;
-    text-transform: uppercase;
 }
 
-#weekly_newsletter .franchisename a.franchise_0005,
-#standings .franchisename a.franchise_0005 {
+:is(#weekly_newsletter, #standings) .franchisename a.franchise_0005 {
     color: var(--team_0005);
-    font-weight: 900;
-    text-transform: uppercase;
 }
 
-#weekly_newsletter .franchisename a.franchise_0006,
-#standings .franchisename a.franchise_0006 {
+:is(#weekly_newsletter, #standings) .franchisename a.franchise_0006 {
     color: var(--team_0006);
-    font-weight: 900;
-    text-transform: uppercase;
 }
 
-#weekly_newsletter .franchisename a.franchise_0007,
-#standings .franchisename a.franchise_0007 {
+:is(#weekly_newsletter, #standings) .franchisename a.franchise_0007 {
     color: var(--team_0007);
-    font-weight: 900;
-    text-transform: uppercase;
 }
 
-#weekly_newsletter .franchisename a.franchise_0008,
-#standings .franchisename a.franchise_0008 {
+:is(#weekly_newsletter, #standings) .franchisename a.franchise_0008 {
     color: var(--team_0008);
-    font-weight: 900;
-    text-transform: uppercase;
 }
 
-#weekly_newsletter .franchisename a.franchise_0009,
-#standings .franchisename a.franchise_0009 {
+:is(#weekly_newsletter, #standings) .franchisename a.franchise_0009 {
     color: var(--team_0009);
-    font-weight: 900;
-    text-transform: uppercase;
 }
 
-#weekly_newsletter .franchisename a.franchise_0010,
-#standings .franchisename a.franchise_0010 {
+:is(#weekly_newsletter, #standings) .franchisename a.franchise_0010 {
     color: var(--team_0010);
-    font-weight: 900;
-    text-transform: uppercase;
 }
 
-
-#options_31 div.mobile-wrap {
+/* Options 31 spacing */
+#options_31 .mobile-wrap {
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
 #options_31 span.reportnavigation {
     margin-top: 0;
-    padding-top: 0;
-    padding-bottom: 50px;
+    padding: 0 0 50px;
 }
 
-#standings .franchisename img {
-    width: 40px;
-    height: 40px;
-}
-
-#standings .franchisename {
-    display: flex;
-    align-content: center;
-}
-
+/* H2 in tabcontent800 */
 #tabcontent800 h2 {
     font-size: 26px;
     text-transform: uppercase;
     font-weight: 900;
     text-align: left;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
-#weekly_newsletter th.h2hwlt,
-#weekly_newsletter td.h2hwlt,
-#weekly_newsletter th.bench_points,
-#weekly_newsletter td.bench_points,
-#weekly_newsletter th.maxpf,
-#weekly_newsletter td.maxpf,
-#weekly_newsletter th.minpf,
-#weekly_newsletter td.minpf,
-#weekly_newsletter th.alt_power_rank,
-#weekly_newsletter td.alt_power_rank,
-#weekly_newsletter th.all_play_w,
-#weekly_newsletter td.all_play_w,
-#weekly_newsletter th.all_play_l,
-#weekly_newsletter td.all_play_l,
-#weekly_newsletter th.all_play_t,
-#weekly_newsletter td.all_play_t,
-#weekly_newsletter th.all_play_pct,
-#weekly_newsletter td.all_play_pct {
+/* Hide duplicate first row in standings (both places) */
+:is(#weekly_newsletter, #body_standings) .standings tr:first-of-type {
     display: none;
 }
 
-#body_standings .standings th.h2hwlt,
-#body_standings .standings td.h2hwlt,
-#body_standings .standings th.bench_points,
-#body_standings .standings td.bench_points,
-#body_standings .standings th.maxpf,
-#body_standings .standings td.maxpf,
-#body_standings .standings th.minpf,
-#body_standings .standings td.minpf,
-#body_standings .standings th.alt_power_rank,
-#body_standings .standings td.alt_power_rank,
-#body_standings .standings th.all_play_w,
-#body_standings .standings td.all_play_w,
-#body_standings .standings th.all_play_l,
-#body_standings .standings td.all_play_l,
-#body_standings .standings th.all_play_t,
-#body_standings .standings td.all_play_t,
-#body_standings .standings th.all_play_pct,
-#body_standings .standings td.all_play_pct {
-    display: none;
-}
-
-#weekly_newsletter .standings table.report,
-#body_standings .standings table.report {
+/* Full width table */
+:is(#weekly_newsletter, #body_standings) .standings table.report {
     width: 100% !important;
 }
 
-#transactions li:before {
+/* Columns to hide (both places) */
+:is(#weekly_newsletter, #body_standings) :is(th, td):is(.h2hwlt, .bench_points, .maxpf, .minpf,
+    .alt_power_rank, .all_play_w, .all_play_l, .all_play_t, .all_play_pct) {
     display: none;
 }
 
-#options_03 tr.system td,
-#transactions tr.system td {
+/* Transactions list bullets */
+#transactions li::before {
+    display: none;
+}
+
+/* System rows dim */
+:is(#options_03, #transactions) tr.system td {
     color: rgb(196, 196, 196);
     font-style: italic;
     font-weight: 500;
-
 }
 
-#options_03 td.acquired,
-#options_03 td.promoted,
-#options_03 td.demoted,
-#options_03 td.dropped,
-#options_03 td.deactivated,
-#options_03 td.activated,
-#options_03 td.add,
-#transactions td.acquired,
-#transactions td.promoted,
-#transactions td.demoted,
-#transactions td.dropped,
-#transactions td.deactivated,
-#transactions td.activated,
-#transactions td.add {
+/* Iconized action cells */
+:is(#options_03, #transactions) td:is(.acquired, .promoted, .demoted, .dropped, .deactivated, .activated, .add) {
     font-size: 0;
+    width: 40px;
 }
 
-#options_03 td.acquired::after,
-#options_03 td.promoted::after,
-#options_03 td.activated::after,
-#options_03 td.add::after,
-#transactions td.acquired::after,
-#transactions td.promoted::after,
-#transactions td.activated::after,
-#transactions td.add::after {
+:is(#options_03, #transactions) td:is(.acquired, .promoted, .activated, .add)::after {
     content: "\f055";
     font-family: "Font Awesome 6 Pro";
     font-size: 20px;
     color: #15997e;
 }
 
-#options_03 td.dropped::after,
-#options_03 td.demoted::after,
-#options_03 td.deactivated::after,
-#transactions td.dropped::after,
-#transactions td.demoted::after,
-#transactions td.deactivated::after {
+:is(#options_03, #transactions) td:is(.dropped, .demoted, .deactivated)::after {
     content: "\f056";
     font-family: "Font Awesome 6 Pro";
     font-size: 20px;
-    color: #bA2A29;
+    color: #BA2A29;
 }
 
-#options_03 table table tr td[colspan="2"],
-#transactions table table tr td[colspan="2"] {
+/* Section headers inside nested tables */
+:is(#options_03, #transactions) table table tr td[colspan="2"] {
     text-align: left;
     font-weight: 900;
     text-transform: uppercase;
     font-size: 13px;
     color: var(--rb-color);
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 0;
 }
 
-#options_03 td.unknown-class,
-#transactions td.unknown-class {
-    font-size: 0px;
+/* Unknown class fallback */
+:is(#options_03, #transactions) td.unknown-class {
+    font-size: 0;
 }
 
-#options_03 td.unknown-class::after,
-#transactions td.unknown-class::after {
+:is(#options_03, #transactions) td.unknown-class::after {
     content: "\f055";
     font-family: "Font Awesome 6 Pro";
     font-size: 20px;
     color: #15997e;
 }
 
-#weekly_newsletter div.standings tr:first-of-type,
-#body_standings div.standings tr:first-of-type {
-    display: none;
-}
-
-#body_standings div.mobile-wrap {
+/* Standings page spacing */
+#body_standings .mobile-wrap {
     margin-bottom: 60px;
 }
 
-
+/* Modal player table fix (kept as-is; it’s base, not just media) */
 @media only screen and (max-width: 720px) {
     #modal_body_player>table>tbody>tr>td {
         float: left;
@@ -10812,10 +10769,10 @@ td#LS_AwayTeamPercent.franchiseicon_0010 {
     }
 }
 
+/* Visuals — images, lists, graphics */
 .payoutsimg {
     max-height: 402px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     display: block;
 }
 
@@ -10828,10 +10785,11 @@ li.newshighlightsli::before {
     margin: 0 auto;
 }
 
+/* Grid placements (with -ms- fallbacks kept) */
 .playoffnewsimg {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
-    grid-column: 1/3;
+    grid-column: 1 / 3;
 }
 
 .wrappernews {
@@ -10840,13 +10798,13 @@ li.newshighlightsli::before {
     -ms-grid-columns: 2fr 1fr;
     grid-template-columns: 2fr 1fr;
     -ms-grid-rows: 2fr 1fr;
-    grid-template-rows: 2fr 1fr;
-    grid-gap: 1em;
     grid-template-rows: auto;
+    /* overrides earlier 2fr 1fr in your source */
+    gap: 1em;
 }
 
 .wrappernews>div {
-    padding: 0em;
+    padding: 0;
     margin: 0 auto;
 }
 
@@ -10855,8 +10813,6 @@ li.newshighlightsli::before {
     grid-row: 1;
     -ms-grid-column: 1;
     grid-column: 1;
-
-
 }
 
 .bonustracker {
@@ -10865,11 +10821,8 @@ li.newshighlightsli::before {
     -ms-grid-row: 1;
     grid-row: 1;
     width: 100%;
-    /* take full container width */
     height: 50vh;
-    /* half the viewport height (example) */
     position: relative;
-    /* required for Chart.js scaling */
     display: flex;
     flex-direction: column;
     margin-bottom: 5em !important;
@@ -10877,7 +10830,6 @@ li.newshighlightsli::before {
 
 #myChart {
     flex: 1;
-    /* fill all available space */
     width: 100% !important;
     height: 100% !important;
 }
@@ -10887,7 +10839,7 @@ li.newshighlightsli::before {
     grid-row: 2;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
-    grid-column: 1/3;
+    grid-column: 1 / 3;
 }
 
 .highlightlist {
@@ -10898,12 +10850,12 @@ li.newshighlightsli::before {
 .headernews {
     color: #011a28;
     text-transform: uppercase;
-    font-weight: normal;
+    font-weight: 400;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 2fr;
     grid-template-columns: 1fr 2fr;
-    grid-gap: 1em;
+    gap: 1em;
     line-height: 80px;
     text-align: right;
     padding-right: 1em;
@@ -10913,15 +10865,19 @@ li.newshighlightsli::before {
     font-weight: 900;
     font-size: 100px;
     padding-right: 35px;
-    padding-top: 10px;
+    padding-top: 50px;
     text-align: right;
     font-family: 'Industry', sans-serif;
     line-height: 90px;
     color: var(--dark-color);
+    -ms-grid-column: 2;
+    grid-column: 2;
+    padding-right: 0.25em;
+    /* keep your later override */
 }
 
 .newsh4 {
-    margin: 0.5em 0 0.5em 0;
+    margin: .5em 0;
     color: #0097fc;
     text-transform: uppercase;
     font-size: 26px;
@@ -10936,40 +10892,43 @@ li.newshighlightsli::before {
     height: 400px;
     width: 400px;
     padding-top: 1em;
+    padding-bottom: 15px;
+    padding-left: 35px;
     margin: auto;
     -ms-grid-column: 1;
     grid-column: 1;
     -ms-grid-row: 1;
     grid-row: 1;
-    padding-bottom: 15px;
-    padding-left: 35px;
 }
 
 .subheader {
-    padding-top: 0px;
+    padding-top: 0;
     color: var(--primary-color);
     font-size: 0.5em;
     line-height: 70px;
     font-family: "Industry", sans-serif;
 }
 
-.standingstable {
-    border-spacing: 0px;
+.standingstable,
+.bonustable {
+    border-spacing: 0;
     width: 100%;
     text-align: left;
 }
 
-th.stats {
-    background: var(--dark-color);
-    color: white;
+th.stats,
+th.franchiseheader {
+    background: #011a28;
+    /* th.stats originally used var(--dark-color); unify if desired */
+    color: #fff;
     padding-left: 10px;
 }
 
-th.franchiseheader {
-    background: #011a28;
-    color: white;
-    padding-left: 10px;
+th.stats {
+    background: var(--dark-color);
 }
+
+/* keep the darker variant for .stats */
 
 .tablerownews {
     border: none;
@@ -10981,17 +10940,14 @@ th.franchiseheader {
 }
 
 .newsh2 {
-
     color: var(--primary-color);
     text-transform: uppercase;
     font-size: 26px;
-    margin-bottom: 0;
+    margin: 1rem 0 0 0;
     font-family: "Industry", sans-serif;
     font-weight: 900;
     background: none;
     text-align: left;
-    margin-left: 0px;
-    margin-top: 1rem;
 }
 
 .wlt {
@@ -11003,7 +10959,7 @@ th.franchiseheader {
     height: 70%;
 }
 
-#playoffTable div.mobile-wrap {
+#playoffTable .mobile-wrap {
     width: 93% !important;
 }
 
@@ -11011,8 +10967,7 @@ th.franchiseheader {
     background: var(--primary-color);
     height: 10px;
     border-radius: 10px;
-    margin: auto;
-    margin-bottom: 1em;
+    margin: 0 auto 1em;
     width: 95%;
 }
 
@@ -11029,199 +10984,44 @@ th.franchiseheader {
     margin: 0 auto;
 }
 
-.fantasea {
-    -ms-grid-column: 2;
-    grid-column: 2;
-    padding-right: 0.25em;
-}
-
 .standingstable {
     height: 80%;
-    padding-bottom: 0em;
+    padding-bottom: 0;
 }
 
-.statsdata {
-    text-align: center;
-}
-
+.statsdata,
 .stats {
     text-align: center;
 }
 
 .newsp {
-    padding-left: .75em;
-    padding-right: .75em;
+    padding: .75em;
     font-size: 1.25em;
 }
 
-.bonustable {
-    width: 100%;
-    border-spacing: 0px;
-    text-align: left;
-}
-
-
-#weekly_newsletter .wrappernews .standings .report .oddtablerow,
-#body_standings .wrappernews .standings .report .oddtablerow {
+/* Odd row background in both contexts */
+:is(#weekly_newsletter, #body_standings) .wrappernews .standings .report .oddtablerow {
     background: var(--grey-color);
 }
 
 
-
-
-
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
-
-
+/* =========================
+   PHONE PORTRAIT (≤414px)
+   ========================= */
+@media (max-width: 414px) {
     .wrappernews {
-        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
 
     .highlights {
-        -ms-grid-row: 3;
         grid-row: 3;
-        grid-column: 1;
-        margin-top: 1em;
-    }
-
-    .bonustracker {
-        -ms-grid-column: 1;
-        grid-column: 1;
-        -ms-grid-row: 2;
-        grid-row: 2;
-
-    }
-
-    .highlightlist {
-        flex-direction: column;
-        margin-top: 0;
-    }
-
-    .newshighlightsli:first-of-type {
-        margin-top: 1em;
-    }
-
-    .newshighlightsli {
-        margin-top: 1em;
-    }
-
-    .headernews {
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        padding-right: 0;
-    }
-
-    .fantasea {
-        font-size: 52px;
-        text-align: center;
-        line-height: 42px;
-        -ms-grid-column: 1;
-        grid-column: 1;
-        padding-right: 0;
-    }
-
-    .bannerimg {
-        height: 200px;
-        width: 200px;
-        padding-bottom: 0;
-        padding-top: 0;
-        padding-left: 0;
-        margin-top: 25px;
-    }
-
-    .subheader {
-        font-size: 30px;
-    }
-
-    .newsh2 {
-        font-size: 26px;
-    }
-
-    .divider {
-        margin-top: 1em;
-    }
-
-    td.td_hide_news {
-        display: none;
-    }
-
-    th.th_hide_news {
-        display: none;
-    }
-
-    #weekly_newsletter th.efficiency,
-    #weekly_newsletter td.efficiency,
-    #weekly_newsletter td.coulda_won,
-    #weekly_newsletter th.coulda_won,
-    #weekly_newsletter td.woulda_lost,
-    #weekly_newsletter th.woulda_lost,
-    #weekly_newsletter th.total_points,
-    #weekly_newsletter td.total_points,
-    #weekly_newsletter th.total_potential_points,
-    #weekly_newsletter td.total_potential_points,
-    #body_standings th.efficiency,
-    #body_standings td.efficiency,
-    #body_standings td.coulda_won,
-    #body_standings th.coulda_won,
-    #body_standings td.woulda_lost,
-    #body_standings th.woulda_lost,
-    #body_standings th.total_points,
-    #body_standings td.total_points,
-    #body_standings th.total_potential_points,
-    #body_standings td.total_potential_points {
-        display: none;
-    }
-
-    p.newsp2 {
-        display: none;
-    }
-
-    th.power_rank {
-        text-align: right;
-    }
-}
-
-@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
-    #options_31 table:nth-child(4) tr:nth-child(n+1):nth-child(-n+7) {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        align-items: center;
-    }
-
-
-
-    #options_31 table:nth-child(4) table tr:nth-child(n+1):nth-child(-n+7) {
-        display: table-row;
-    }
-
-
-    #weekly_newsletter .franchisename img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .wrappernews {
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    }
-
-    .highlights {
-        -ms-grid-row: 3;
-        grid-row: 3;
-        -ms-grid-column: 1;
         grid-column: 1;
         margin-top: 3em;
     }
 
     .bonustracker {
-        -ms-grid-column: 1;
         grid-column: 1;
-        -ms-grid-row: 2;
         grid-row: 2;
-
     }
 
     .highlightlist {
@@ -11229,32 +11029,29 @@ th.franchiseheader {
         margin-top: 0;
     }
 
+    .newshighlightsli,
     .newshighlightsli:first-of-type {
         margin-top: 1em;
     }
 
-    .newshighlightsli {
-        margin-top: 1em;
-    }
-
     .headernews {
-        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         padding-right: 0;
+        text-align: center;
     }
 
     .fantasea {
         font-size: 52px;
-        text-align: center;
         line-height: 42px;
+        text-align: center;
+        padding-right: 0;
+        grid-column: 1;
     }
 
     .bannerimg {
         height: 200px;
         width: 200px;
-        padding-bottom: 0;
-        padding-top: 0;
-        padding-left: 0;
+        padding: 0;
         margin-top: 25px;
     }
 
@@ -11271,42 +11068,13 @@ th.franchiseheader {
         margin-top: 1em;
     }
 
-    .fantasea {
-        -ms-grid-column: 1;
-        grid-column: 1;
-        padding-right: 0;
-        font-size: 60px;
-        line-height: 50px;
-    }
-
-    td.td_hide_news {
+    td.td_hide_news,
+    th.th_hide_news,
+    p.newsp2 {
         display: none;
     }
 
-    th.th_hide_news {
-        display: none;
-    }
-
-    #weekly_newsletter th.efficiency,
-    #weekly_newsletter td.efficiency,
-    #weekly_newsletter td.coulda_won,
-    #weekly_newsletter th.coulda_won,
-    #weekly_newsletter td.woulda_lost,
-    #weekly_newsletter th.woulda_lost,
-    #weekly_newsletter th.total_points,
-    #weekly_newsletter td.total_points,
-    #weekly_newsletter th.total_potential_points,
-    #weekly_newsletter td.total_potential_points,
-    #body_standings th.efficiency,
-    #body_standings td.efficiency,
-    #body_standings td.coulda_won,
-    #body_standings th.coulda_won,
-    #body_standings td.woulda_lost,
-    #body_standings th.woulda_lost,
-    #body_standings th.total_points,
-    #body_standings td.total_points,
-    #body_standings th.total_potential_points,
-    #body_standings td.total_potential_points {
+    :is(#weekly_newsletter, #body_standings) :is(th, td):is(.efficiency, .coulda_won, .woulda_lost, .total_points, .total_potential_points) {
         display: none;
     }
 
@@ -11314,201 +11082,211 @@ th.franchiseheader {
         max-height: 278px;
     }
 
-    p.newsp2 {
-        display: none;
-    }
-
     th.power_rank {
         text-align: right;
     }
+}
 
+/* ======================================
+   SMALL–MEDIUM PHONES (≤896px, general)
+   ====================================== */
+@media (max-width: 833px) {
+
+    /* Same single-column layout as 414px, but slightly different spacing */
+    .wrappernews {
+        grid-template-columns: 1fr;
+    }
+
+    .highlights {
+        grid-row: 3;
+        grid-column: 1;
+        margin-top: 1em;
+    }
+
+    .bonustracker {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .highlightlist {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .headernews {
+        grid-template-columns: 1fr;
+        padding-right: 0;
+    }
+
+    .fantasea {
+        font-size: 52px;
+        line-height: 42px;
+        grid-row: 2;
+        grid-column: 1;
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .bannerimg {
+        height: 200px;
+        width: 200px;
+        padding: 0;
+        margin-top: 25px;
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .subheader {
+        font-size: 30px;
+        line-height: 70px;
+    }
+
+    .newsh2 {
+        font-size: 26px;
+    }
+
+    .divider {
+        margin-top: 1em;
+    }
+
+    /* Option 31 stacked tweak */
+    #options_31 table:nth-child(4) tr:nth-child(n+1):nth-child(-n+7) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    #options_31 table:nth-child(4) table tr:nth-child(n+1):nth-child(-n+7) {
+        display: table-row;
+    }
+
+    /* Odd row bg override (you had this on one phone query) */
     #weekly_newsletter .wrappernews .standings .report .oddtablerow,
     #standings .wrappernews .standings .report .oddtablerow {
         background: none;
     }
+
+    /* ✅ also hide these on small–medium phones */
+    td.td_hide_news,
+    th.th_hide_news,
+    p.newsp2 {
+        display: none;
+    }
+
+    :is(#weekly_newsletter, #body_standings) :is(th, td):is(.efficiency,
+        .coulda_won,
+        .woulda_lost,
+        .total_points,
+        .total_potential_points) {
+        display: none;
+    }
+
+    /* match your original */
+    th.power_rank {
+        text-align: right;
+    }
+
+    /* match your original phone/tablet image cap */
+    .payoutsimg {
+        max-height: 278px;
+    }
 }
 
-@media only screen and (min-device-width: 834px) and (max-device-width: 1194px) and (-webkit-min-device-pixel-ratio: 2) {
+/* ======================================
+   SMALL–MEDIUM PHONES — LANDSCAPE
+   ====================================== */
+@media (max-width: 896px) and (orientation: landscape) {
+    .wrappernews {
+        grid-template-columns: 1fr;
+    }
 
+    .bonustracker {
+        grid-column: 1;
+        grid-row: 2;
+    }
 
     .playoffnewsimg {
-        grid-row: 1;
-        -ms-grid-row-span: 2;
-        grid-column: 1/3;
-    }
-
-    .wrappernews {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 2fr 1fr;
-        grid-template-columns: 2fr 1fr;
-        -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-        grid-gap: 1em;
-    }
-
-    .wrappernews>div {
-        padding: 1em;
-        margin: 0 auto;
-    }
-
-    .standings {
-        -ms-grid-row: 1;
-        grid-row: 1;
-        -ms-grid-column: 1;
-        grid-column: 1;
-
-    }
-
-    .bonustracker {
-        -ms-grid-column: 1;
-        grid-column: 1;
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 1;
-        grid-row: 1/2;
-
-    }
-
-    .bonustracker {
-        -ms-grid-column: 2;
-        grid-column: 2;
-        -ms-grid-row: 1;
-        grid-row: 1;
-    }
-
-    .highlights {
-        -ms-grid-row: 2;
-        grid-row: 2;
-        -ms-grid-column: 1;
-        -ms-grid-column-span: 2;
-        grid-column: 1/3;
+        grid-row: 1 / 3;
     }
 
     .highlightlist {
-        display: flex;
+        flex-direction: column;
         text-align: center;
-        flex-direction: row;
+    }
+
+    .highlights {
+        margin-top: 1em;
+    }
+}
+
+/* =========================
+   TABLETS (iPad-ish widths)
+   ========================= */
+@media (min-width: 834px) and (max-width: 1194px) {
+    .wrappernews {
+        grid-template-columns: 2fr 1fr;
+        gap: 1em;
+    }
+
+    .highlights {
+        grid-row: 2;
+        grid-column: 1 / 3;
+    }
+
+    .bonustracker {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .playoffnewsimg {
+        grid-row: 1;
+        grid-column: 1 / 3;
     }
 
     .headernews {
-        color: #011a28;
-        text-transform: uppercase;
-        font-weight: normal;
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 1fr 2fr;
         grid-template-columns: 1fr 2fr;
-        grid-gap: 1em;
         line-height: 80px;
-        text-align: right;
         padding-right: 1em;
     }
 
     .fantasea {
-        font-weight: 900;
-        font-size: 66px;
         padding-right: 35px;
-        padding-top: 70px;
-        text-align: right;
-        font-family: 'Industry', sans-serif;
-        line-height: 57px;
-    }
-
-    .newsh4 {
-        margin: 0.5em 0 0.5em 0;
-        color: #0097fc;
-        text-transform: uppercase;
-        font-size: 26px;
-        font-weight: 900;
-    }
-
-    .title {
-        color: #0097fc;
+        padding-top: 32px;
+        line-height: 60px;
+        font-size: 75px;
     }
 
     .bannerimg {
-        height: 330px;
-        width: 330px;
+        height: 260px;
+        width: 260px;
         padding-top: 1em;
-        margin: auto;
-        -ms-grid-column: 1;
-        grid-column: 1;
-        -ms-grid-row: 1;
-        grid-row: 1;
         padding-bottom: 15px;
         padding-left: 35px;
     }
 
     .subheader {
-        padding-top: 0px;
         font-size: 42px;
         line-height: 70px;
-        font-family: "Industry", sans-serif;
-    }
-
-    .standingstable {
-        border-spacing: 0px;
-        width: 100%;
-        text-align: left;
-    }
-
-    th.stats {
-        background: #011a28;
-        color: white;
-        padding-left: 10px;
-    }
-
-    th.franchiseheader {
-        background: #011a28;
-        color: white;
-        padding-left: 10px;
-    }
-
-    .tablerownews {
-        border: none;
-        padding-left: 10px;
-    }
-
-    .statsdata {
-        padding-left: 10px;
     }
 
     .newsh2 {
-
-        color: #0097fc;
-        text-transform: uppercase;
         font-size: 26px;
-
         margin-top: 20px;
-        background: none;
-        text-align: left;
-    }
-
-    .wlt {
-        font-weight: bold;
-        text-align: center;
-    }
-
-    .playofftable {
-        height: 70%;
     }
 
     .divider {
         background: #0097fc;
-        height: 10px;
-        border-radius: 10px;
-        margin: auto;
-        margin-bottom: 1em;
-        width: 95%;
     }
 
-    ul {
-        padding-left: 0px;
-        margin-top: 0px;
+    .highlightlist {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
     }
 
     .newshighlightsli {
-        list-style-type: none;
+        list-style: none;
         padding-left: 5px;
     }
 
@@ -11517,35 +11295,19 @@ th.franchiseheader {
         width: 75px;
     }
 
-    .fantasea {
-        -ms-grid-column: 2;
-        grid-column: 2;
-        padding-right: 0.25em;
-    }
-
     .standingstable {
         height: 80%;
-        padding-bottom: 0em;
+        padding-bottom: 0;
     }
 
-    .statsdata {
-        text-align: center;
-    }
-
+    .statsdata,
     .stats {
         text-align: center;
     }
 
     .newsp {
-        padding-left: .75em;
-        padding-right: .75em;
+        padding: .75em;
         font-size: 1.25em;
-    }
-
-    .bonustable {
-        width: 100%;
-        border-spacing: 0px;
-        text-align: left;
     }
 
     .payoutsimg {
@@ -11553,125 +11315,69 @@ th.franchiseheader {
     }
 }
 
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
-    .bonustracker {
-        -ms-grid-column: 1;
-        grid-column: 1;
-        -ms-grid-row: 2;
-        grid-row: 2;
-
-    }
-
+/* =========================
+   TABLETS — LANDSCAPE
+   ========================= */
+@media (min-width: 834px) and (max-width: 1194px) and (orientation: landscape) {
     .playoffnewsimg {
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 2;
-        grid-row: 1/3;
-    }
-}
-
-@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-    .playoffnewsimg {
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 2;
-        grid-row: 1/3;
-    }
-
-    .wrappernews {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-        grid-gap: 1em;
-    }
-
-    .bonustracker {
-        -ms-grid-column: 1;
-        grid-column: 1;
-        -ms-grid-row: 2;
-        grid-row: 2;
-
-    }
-
-    .highlights {
-        margin-top: 1em;
+        grid-row: 1 / 3;
     }
 
     .highlightlist {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-@media only screen and (max-device-width: 834px) and (max-device-width: 1194px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-    .playoffnewsimg {
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 2;
-        grid-row: 1/3;
-    }
-
-    .highlightlist {
-        display: flex;
         flex-direction: row;
         text-align: center;
     }
 
     .highlights {
         margin-top: 3em;
-        -ms-grid-row: 4;
         grid-row: 4;
     }
 
+    /* retained your special case */
     .wrappernews {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
-        grid-gap: 1em;
     }
 
     .bonustracker {
-        -ms-grid-column: 2;
         grid-column: 2;
-        -ms-grid-row: 1;
         grid-row: 1;
-
     }
 }
 
-@media only screen and (min-width: 1195px) {
+/* ======================================
+   SAFARI/OLD WEBKIT iPad (DPR fallback)
+   ====================================== */
+@media only screen and (min-device-width: 834px) and (max-device-width: 1194px) and (-webkit-min-device-pixel-ratio: 2) {
+    /* Only include overrides that truly need DPR targeting (optional) */
+    /* (You can leave empty if the width-based query handles it.) */
+}
+
+/* =========================
+   DESKTOP (≥1195px)
+   ========================= */
+@media (min-width: 1195px) {
+    .wrappernews {
+        grid-template-columns: 2fr 1fr;
+        gap: 1em;
+    }
+
     .highlightlist {
-        display: flex;
         flex-direction: row;
         text-align: center;
     }
 
     .highlights {
-        margin-top: 0em;
-    }
-
-    .wrappernews {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 2fr 1fr;
-        grid-template-columns: 2fr 1fr;
-        grid-gap: 1em;
+        margin-top: 0;
     }
 
     .bonustracker {
-        -ms-grid-column: 2;
         grid-column: 2;
-        -ms-grid-row: 1;
         grid-row: 1;
-
     }
 
     .fantasea {
         font-size: 100px;
-        line-height: 90px;
+        line-height: 75px;
     }
 
     .subheader {
@@ -11680,27 +11386,13 @@ th.franchiseheader {
     }
 }
 
-@media only screen and (min-width: 2333px) {
+/* =========================
+   VERY WIDE
+   ========================= */
+@media (min-width: 1404px) {
     .fantasea {
-        font-size: 129px;
-        line-height: 98px;
-        padding-top: 115px;
-    }
-
-    .subheader {
-        font-size: 50px;
+        font-size: 120px;
         line-height: 90px;
-    }
-
-    .payoutsimg {
-        max-height: 475px;
-    }
-}
-
-@media only screen and (min-width: 1404px) {
-    .fantasea {
-        font-size: 129px;
-        line-height: 98px;
         padding-top: 15px;
     }
 
@@ -11709,11 +11401,11 @@ th.franchiseheader {
     }
 }
 
-@media only screen and (min-width: 2128px) {
+@media (min-width: 1700px) {
     .fantasea {
-        font-size: 129px;
-        line-height: 98px;
-        padding-top: 115px;
+        font-size: 160px;
+        line-height: 120px;
+        padding-top: 15px;
     }
 
     .payoutsimg {
@@ -11721,124 +11413,24 @@ th.franchiseheader {
     }
 }
 
-@media only screen and (max-width:414px) {
-    .wrappernews {
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    }
-
-    .highlights {
-        -ms-grid-row: 3;
-        grid-row: 3;
-        -ms-grid-column: 1;
-        grid-column: 1;
-        margin-top: 3em;
-    }
-
-    .bonustracker {
-        -ms-grid-column: 1;
-        grid-column: 1;
-        -ms-grid-row: 2;
-        grid-row: 2;
-
-    }
-
-    .highlightlist {
-        flex-direction: column;
-        margin-top: 0;
-    }
-
-    .newshighlightsli:first-of-type {
-        margin-top: 1em;
-    }
-
-    .newshighlightsli {
-        margin-top: 1em;
-    }
-
-    .headernews {
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        padding-right: 0;
-    }
-
+@media (min-width: 2128px) {
     .fantasea {
-        font-size: 52px;
-        text-align: center;
-        line-height: 42px;
-    }
-
-    .bannerimg {
-        height: 200px;
-        width: 200px;
-        padding-bottom: 0;
-        padding-top: 0;
-        padding-left: 0;
-        margin-top: 25px;
-    }
-
-    .subheader {
-        font-size: 30px;
-        line-height: 70px;
-    }
-
-    .newsh2 {
-        font-size: 26px;
-    }
-
-    .divider {
-        margin-top: 1em;
-    }
-
-    .fantasea {
-        -ms-grid-column: 1;
-        grid-column: 1;
-        padding-right: 0;
-    }
-
-    td.td_hide_news {
-        display: none;
-    }
-
-    th.th_hide_news {
-        display: none;
-    }
-
-    #weekly_newsletter th.efficiency,
-    #weekly_newsletter td.efficiency,
-    #weekly_newsletter td.coulda_won,
-    #weekly_newsletter th.coulda_won,
-    #weekly_newsletter td.woulda_lost,
-    #weekly_newsletter th.woulda_lost,
-    #weekly_newsletter th.total_points,
-    #weekly_newsletter td.total_points,
-    #weekly_newsletter th.total_potential_points,
-    #weekly_newsletter td.total_potential_points,
-    #body_standings th.efficiency,
-    #body_standings td.efficiency,
-    #body_standings td.coulda_won,
-    #body_standings th.coulda_won,
-    #body_standings td.woulda_lost,
-    #body_standings th.woulda_lost,
-    #body_standings th.total_points,
-    #body_standings td.total_points,
-    #body_standings th.total_potential_points,
-    #body_standings td.total_potential_points {
-        display: none;
+        padding-top: 40px;
     }
 
     .payoutsimg {
-        max-height: 278px;
-    }
-
-    p.newsp2 {
-        display: none;
-    }
-
-    th.power_rank {
-        text-align: right;
+        max-height: 475px;
     }
 }
+
+@media (min-width: 2333px) {
+    .subheader {
+        line-height: 90px;
+    }
+}
+
+
+
 
 
 // 16. Add/Drop
@@ -14939,6 +14531,8 @@ a.subhead {
     }
 }
 
+
+/*
 .payoutsimg {
     max-height: 402px;
     margin-left: auto;
@@ -15601,375 +15195,9 @@ ul {
     }
 }
 
-@media only screen and (min-device-width: 834px) and (max-device-width: 1194px) and (-webkit-min-device-pixel-ratio: 2) {
-    .playoffnewsimg {
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 2;
-        grid-row: 1/3;
-    }
+*/
 
-    .wrappernews {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 2fr 1fr;
-        grid-template-columns: 2fr 1fr;
-        -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-        grid-gap: 1em;
-    }
 
-    .wrappernews>div {
-        padding: 1em;
-    }
-
-    .standings {
-        -ms-grid-row: 1;
-        grid-row: 1;
-        -ms-grid-column: 1;
-        grid-column: 1;
-
-    }
-
-    .bonustracker {
-        -ms-grid-column: 1;
-        grid-column: 1;
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 1;
-        grid-row: 1/2;
-
-    }
-
-    .bonustracker {
-        -ms-grid-column: 2;
-        grid-column: 2;
-        -ms-grid-row: 1;
-        grid-row: 1;
-    }
-
-    .highlights {
-        -ms-grid-row: 2;
-        grid-row: 2;
-        -ms-grid-column: 1;
-        -ms-grid-column-span: 2;
-        grid-column: 1/3;
-    }
-
-    .highlightlist {
-        display: flex;
-        text-align: center;
-        flex-direction: row;
-    }
-
-    .headernews {
-        color: #011a28;
-        text-transform: uppercase;
-        font-weight: normal;
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 1fr 2fr;
-        grid-template-columns: 1fr 2fr;
-        grid-gap: 1em;
-        line-height: 80px;
-        text-align: right;
-        padding-right: 1em;
-    }
-
-    .fantasea {
-        font-weight: 900;
-        font-size: 7.5em;
-        padding-right: 35px;
-        padding-top: 10px;
-        text-align: right;
-        font-family: 'Industry', sans-serif;
-        line-height: 90px;
-    }
-
-    .newsh4 {
-        margin: 0.5em 0 0.5em 0;
-        color: #0097fc;
-        text-transform: uppercase;
-        font-size: 1.5em;
-        font-weight: 900;
-    }
-
-    .title {
-        color: #0097fc;
-    }
-
-    .bannerimg {
-        height: 250px;
-        width: 250px;
-        padding-top: 1em;
-        margin: auto;
-        -ms-grid-column: 1;
-        grid-column: 1;
-        -ms-grid-row: 1;
-        grid-row: 1;
-        padding-bottom: 15px;
-        padding-left: 35px;
-    }
-
-    .subheader {
-        padding-top: 0px;
-        font-size: 0.5em;
-        line-height: 70px;
-        font-family: "Industry", sans-serif;
-    }
-
-    .standingstable {
-        border-spacing: 0px;
-        width: 100%;
-        text-align: left;
-    }
-
-    th.stats {
-        background: var(--dark-color);
-        color: white;
-        padding-left: 10px;
-    }
-
-    th.franchiseheader {
-        background: var(--dark-color);
-        color: white;
-        padding-left: 10px;
-    }
-
-    .tablerownews {
-        border: none;
-        padding-left: 10px;
-    }
-
-    .statsdata {
-        padding-left: 10px;
-    }
-
-    .newsh2 {
-
-        color: #0097fc;
-        text-transform: uppercase;
-        font-size: 2em;
-
-        margin-top: 20px;
-        background: none;
-        text-align: left;
-    }
-
-    .wlt {
-        font-weight: bold;
-        text-align: center;
-    }
-
-    .playofftable {
-        height: 70%;
-    }
-
-    .divider {
-        background: #0097fc;
-        height: 10px;
-        border-radius: 10px;
-        margin: auto;
-        margin-bottom: 1em;
-        width: 95%;
-    }
-
-    ul {
-        padding-left: 0px;
-        margin-top: 0px;
-    }
-
-    .newshighlightsli {
-        list-style-type: none;
-        padding-left: 5px;
-    }
-
-    .highlightimg {
-        height: 75px;
-        width: 75px;
-    }
-
-    .fantasea {
-        -ms-grid-column: 2;
-        grid-column: 2;
-        padding-right: 0.25em;
-    }
-
-    .standingstable {
-        height: 80%;
-        padding-bottom: 0em;
-    }
-
-    .statsdata {
-        text-align: center;
-    }
-
-    .stats {
-        text-align: center;
-    }
-
-    .newsp {
-        padding-left: .75em;
-        padding-right: .75em;
-        font-size: 1.25em;
-    }
-
-    .bonustable {
-        width: 100%;
-        border-spacing: 0px;
-        text-align: left;
-    }
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
-    .bonustracker {
-        -ms-grid-column: 1;
-        grid-column: 1;
-        -ms-grid-row: 2;
-        grid-row: 2;
-
-    }
-
-    .playoffnewsimg {
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 2;
-        grid-row: 1/3;
-    }
-}
-
-@media only screen and (min-device-width: 1px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-    .playoffnewsimg {
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 2;
-        grid-row: 1/3;
-    }
-
-    .wrappernews {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-        grid-gap: 1em;
-    }
-
-    .bonustracker {
-        -ms-grid-column: 1;
-        grid-column: 1;
-        -ms-grid-row: 2;
-        grid-row: 2;
-
-    }
-
-    .highlights {
-        margin-top: 1em;
-    }
-
-    .highlightlist {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-@media only screen and (max-device-width: 834px) and (max-device-width: 1194px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-    .playoffnewsimg {
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 2;
-        grid-row: 1/3;
-    }
-
-    .highlightlist {
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-    }
-
-    .highlights {
-        margin-top: 3em;
-        -ms-grid-row: 4;
-        grid-row: 4;
-    }
-
-    .wrappernews {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 2fr 1fr;
-        grid-template-columns: 2fr 1fr;
-        grid-gap: 1em;
-    }
-
-    .bonustracker {
-        -ms-grid-column: 2;
-        grid-column: 2;
-        -ms-grid-row: 1;
-        grid-row: 1;
-
-    }
-}
-
-@media only screen and (min-width: 1195px) {
-    .highlightlist {
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-    }
-
-    .highlights {
-        margin-top: 0em;
-    }
-
-    .wrappernews {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 2fr 1fr;
-        grid-template-columns: 2fr 1fr;
-        grid-gap: 1em;
-    }
-
-    .bonustracker {
-        -ms-grid-column: 2;
-        grid-column: 2;
-        -ms-grid-row: 1;
-        grid-row: 1;
-
-    }
-
-    .fantasea {
-        font-size: 8.5em;
-        line-height: 104px;
-    }
-
-    .subheader {
-        font-size: 4.5rem;
-        line-height: 75px;
-    }
-}
-
-@media only screen and (min-width: 2333px) {
-    .fantasea {
-        font-size: 13em;
-        line-height: 124px;
-    }
-
-    .subheader {
-        font-size: 4.5rem;
-        line-height: 90px;
-    }
-}
-
-@media only screen and (min-width: 1404px) {
-    .fantasea {
-        font-size: 8.5em;
-        line-height: 124px;
-    }
-}
-
-@media only screen and (min-width: 2128px) {
-    .fantasea {
-        font-size: 9.5em;
-        line-height: 124px;
-    }
-}
 
 /***************************************/
 

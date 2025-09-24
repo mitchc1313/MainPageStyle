@@ -10040,7 +10040,12 @@ span.ls_at_projected {
 }
 
 .ls_toggle_settings {
-    padding-left: 3.313rem !important;
+    text-align: center;
+}
+
+.ls_append_input {
+    margin: auto;
+    text-align: center;
 }
 
 #other_games {
@@ -10257,7 +10262,10 @@ td#LS_AwayTeamPercent.franchiseicon_0010 {
     background-color: var(--team_0010) !important;
 }
 
-
+#body_ajax_ls #roster_away .no_stats,
+#body_ajax_ls #roster_home .no_stats {
+    padding-bottom: 0;
+}
 
 #ajax_ls table#roster_home.franchiseicon_0001 .last_name_roster a,
 #ajax_ls table#roster_away.franchiseicon_0001 .last_name_roster a,
